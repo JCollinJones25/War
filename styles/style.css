@@ -12,6 +12,21 @@ h1 {
 h2 {
     color: brown;
 }
+.rules {
+    background-color: salmon;
+    color: brown;
+    height: 80px;
+    max-width: 500px;
+    border: solid;
+    border-color: red;
+    border-radius: 5%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 5px;
+    justify-content: space-around;
+    font-size: 18px;
+    white-space: pre-line;
+}
 .gametable {
     background-color: darkgreen;
     height: 600px;
@@ -49,6 +64,7 @@ h2 {
 }
 .score1 {
     background-color: salmon;
+    color: brown;
     height: 15%;
     width: 33%;
     border: solid;
@@ -60,6 +76,7 @@ h2 {
 }
 .score2 {
     background-color: salmon;
+    color: brown;
     height: 15%;
     width: 33%;
     border: solid;
@@ -81,4 +98,10 @@ h2 {
     margin: 10px;
     align-self: center;
     flex-wrap: wrap;
+}
+.value1 {
+    font-size: 60px;
+}
+.value2 {
+    font-size: 60px;
 }

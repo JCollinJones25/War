@@ -50,3 +50,6 @@ War is a simple card game where a single, standard deck of 52 cards is split in 
 * Player with the higher value card receives a point
 * Points are recorded for players
 * Winner is determined once certain score is reached
+
+## Stretch Goals
+* Display text "War!" if there is a tie
