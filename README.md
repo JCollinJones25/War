@@ -41,3 +41,12 @@ War is a simple card game where a single, standard deck of 52 cards is split in 
 
 ## Wireframing
 ![wireframe image](https://github.com/JCollinJones25/GA-proj-1-War/blob/main/proj-1-wireframe.png?raw=true)
+
+## MVP
+* Deck must be shuffled (randomized) at start of game
+* Players must each have a deck
+* Top card of deck should flip over when draw button is pressed
+* The value of the cards is compared
+* Player with the higher value card receives a point
+* Points are recorded for players
+* Winner is determined once certain score is reached
