@@ -1,5 +1,5 @@
 body {
-    background-color: slategray;
+    background-color: darkgreen;
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -87,8 +87,8 @@ h2 {
     margin-bottom: 40px;
 }
 .draw {
-    background-color: goldenrod;
-    color: slateblue;
+    background-color: slateblue;
+    color: yellow;
     height: 60px;
     width: 60px;
     font-size: 75%;
@@ -102,7 +102,7 @@ h2 {
     flex-wrap: wrap;
 }
 .restart {
-    background-color: slateblue;
+    background-color: rgb(51, 36, 151);
     color: yellow;
     height: 50px;
     width: 65px;
