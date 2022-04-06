@@ -87,14 +87,29 @@ h2 {
     margin-bottom: 40px;
 }
 .draw {
-    background-color: slateblue;
-    color: yellow;
+    background-color: goldenrod;
+    color: slateblue;
     height: 60px;
     width: 60px;
     font-size: 75%;
     border-color: brown;
     border-width: 5px;
     border-radius: 50%;
+    margin: 10px;
+    margin-right: 100%;
+    margin-left: 100%;
+    align-self: center;
+    flex-wrap: wrap;
+}
+.restart {
+    background-color: slateblue;
+    color: yellow;
+    height: 50px;
+    width: 65px;
+    font-size: 75%;
+    border-color: brown;
+    border-width: 5px;
+    border-radius: 25%;
     margin: 10px;
     align-self: center;
     flex-wrap: wrap;
