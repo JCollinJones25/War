@@ -44,6 +44,10 @@ h2 {
     flex-wrap: wrap;
 }
 .deck1 {
+    background-image: url("https://opengameart.org/sites/default/files/card%20back%20red.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: salmon;
     height: 33%;
     width: 30%;
@@ -54,6 +58,10 @@ h2 {
 }
 
 .deck2 {
+    background-image: url("https://opengameart.org/sites/default/files/card%20back%20red.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: salmon;
     height: 33%;
     width: 30%;

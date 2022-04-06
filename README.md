@@ -30,7 +30,7 @@ War is a simple card game where a single, standard deck of 52 cards is split in 
 
 ## Styling considerations
 * front of card should be just number and either words saying suit or image of suit (4 pictures will take a lot less time to store in code rather than 52 images - one for each individual card)
-* back of card can be image as well
+* deck1 and deck2 divs can be image of back of card
 
 ## User Stories
 * As a user:

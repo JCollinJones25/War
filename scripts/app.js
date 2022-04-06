@@ -1,3 +1,4 @@
+
 // create an object of a deck of cards
 // object includes card rank, suit, and score
 // method below taken from own work done earlier in course on card game lab
@@ -31,28 +32,23 @@ const deck1 = new Deck()
 deck1.draw()
 console.log(deck1)
 
+// shuffle the deck and divide by two
+// custom sort method found on DEV
 const shuffledDeck = deck1.cards.sort((a, b) => .5 - Math.random())
 console.log(shuffledDeck)
 
-// create a new deck based off deck class that is deck1 but shuffled
-// const shuffledDeck = new Deck()
-// function shuffle(){
-//     const randomCard = deck1[Math.floor(Math.random() * i)]
-//     deck1.splice(randomCard)
-//     this.cards.push(randomCard)
-    
-// }
-// shuffledDeck.draw()
 
-
-// shuffle the deck and divide by two
-
-// let shuffledDeck = []
-
-// function shuffle() {
-// }
-//     for (let i = 0; i <= deck1.length; i++) {
+// Fisher-Yates Algorithm found on DEV
+// const shuffledDeck = array => {
+//     for (let i = deck1.cards.length - 1; i > 0; i--){
+//         const j = Math.floor(Math.random() * (i + 1))
+//         const temp = array[i]
+//         array[i] = array[j]
+//         array[j] = temp
 //     }
+// }
+// console.log(shuffledDeck)
+
 
 
 // create a new array
@@ -61,3 +57,20 @@ console.log(shuffledDeck)
 // Splice that random number out of your old array
 // Push the spliced element to your new array
 // Outside the loop, have the function return your new array
+
+
+// divide shuffled deck between deck1 and deck2
+// use for loop to assign cards from shuffled deck to arrays of players decks
+// deck1 = shuffledDeck[0 - 25]
+// deck2 = shuffledDeck[26 - 52]
+
+
+
+
+// deck1.text() = deck 1 shuffledDeck.rank
+
+
+
+
+
+// deck2.text() = deck 2 shuffledDeck.rank
