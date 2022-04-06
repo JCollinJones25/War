@@ -40,4 +40,4 @@ War is a simple card game where a single, standard deck of 52 cards is split in 
 - I want next card to be face down before drawing it next
 
 ## Wireframing
-![](./recents/proj-1-wireframe)
+![alt text](screenshots/proj-1-wireframe.png)
