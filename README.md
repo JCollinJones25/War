@@ -33,8 +33,11 @@ War is a simple card game where a single, standard deck of 52 cards is split in 
 * back of card can be image as well
 
 ## User Stories
-* As a user 
+* As a user:
 - I want to draw the top card from my deck
 - I want to see my score
 - I want the previously flipped card to be discarded after turn is over
 - I want next card to be face down before drawing it next
+
+## Wireframing
+![](./recents/proj-1-wireframe)
