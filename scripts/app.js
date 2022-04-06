@@ -64,7 +64,19 @@ console.log(shuffledDeck)
 // deck1 = shuffledDeck[0 - 25]
 // deck2 = shuffledDeck[26 - 52]
 
+let player1 = shuffledDeck[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
+     12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+// for (let i = 0; i < shuffledDeck[26]; i++) {
+//     shuffledDeck.push(player1)
+// }
+console.log(player1)
 
+let player2 = [26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 
+    39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51]
+// for (let i = 0; i < shuffledDeck[53] && i >= shuffledDeck[26]; i++) {
+//     shuffledDeck.push(player2)
+// }
+console.log(player2)
 
 
 // deck1.text() = deck 1 shuffledDeck.rank
