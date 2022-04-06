@@ -5,21 +5,26 @@ body {
     justify-content: center;
 }
 h1 {
-    color: red;
+    color: salmon;
     font-size: 50px;
 }
 h2 {
-    color: red;
+    color: salmon;
 }
 .gametable {
     background-color: green;
-    height: 650px;
+    height: 600px;
     max-width: 500px;
     display: flex;
     justify-content: space-around;
     align-items: center; 
+    align-content: center;
     flex-direction: row;
-
+    border: solid;
+    border-width: 10px;
+    border-color: brown;
+    border-radius: 5%;
+    flex-wrap: wrap;
 }
 .deck1 {
     background-color: salmon;
@@ -28,6 +33,7 @@ h2 {
     border: solid;
     border-color: red;
     border-radius: 5%;
+    margin: 30px;
 }
 
 .deck2 {
@@ -37,4 +43,40 @@ h2 {
     border: solid;
     border-color: red;
     border-radius: 5%;
+    margin: 30px;
+}
+.score1 {
+    background-color: salmon;
+    height: 15%;
+    width: 33%;
+    border: solid;
+    border-color: red;
+    border-radius: 5%;
+    margin-bottom: 50px;
+    margin: 10px;
+    margin-bottom: 40px;
+}
+.score2 {
+    background-color: salmon;
+    height: 15%;
+    width: 33%;
+    border: solid;
+    border-color: red;
+    border-radius: 5%;
+    margin-bottom: 50px;
+    margin: 10px;
+    margin-bottom: 40px;
+}
+.draw {
+    background-color: rgb(150, 150, 31);
+    color: yellow;
+    height: 60px;
+    width: 60px;
+    font-size: 50%;
+    border-color: brown;
+    border-width: 5px;
+    border-radius: 50%;
+    margin: 10px;
+    align-self: center;
+    flex-wrap: wrap;
 }
