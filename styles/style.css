@@ -155,14 +155,11 @@ h2 {
     border-color: brown;
     border-width: 5px;
     border-radius: 50%;
-    margin: 10px;
-    margin-right: 100%;
-    margin-left: 100%;
     align-self: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
-.restart {
+.nextCard {
     background-color: rgb(51, 36, 151);
     color: yellow;
     height: 50px;
@@ -171,9 +168,22 @@ h2 {
     border-color: brown;
     border-width: 5px;
     border-radius: 25%;
-    margin: 10px;
+    margin-left: 25%;
     align-self: center;
     flex-wrap: wrap;
+}
+.newGame { 
+    background-color: rgb(51, 36, 151);
+    color: yellow;
+    height: auto;
+    height: 50px;
+    width: 65px;
+    font-size: 75%;
+    border-color: brown;
+    border-width: 5px;
+    border-radius: 25%;
+    align-self: center;
+    margin-right: 25%; 
 }
 
 .value1 {

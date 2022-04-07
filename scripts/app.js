@@ -85,10 +85,22 @@ function gamePlay() {
 
 
 // restart button
-let $restart = $('.restart')
-$restart.click(newGame)
+let $nextCard = $('.nextCard')
+$nextCard.click(newRound)
+
+function newRound(){
+    $('.facedown1').show()
+    $('.facedown2').show()
+}
+
+// new game button
+let $newGame = $('.newGame')
+$newGame.click(newGame)
 
 function newGame(){
     $('.facedown1').show()
     $('.facedown2').show()
 }
+
+
+
