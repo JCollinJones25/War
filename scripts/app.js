@@ -69,7 +69,7 @@ function gamePlay() {
     $('.facedown1').hide()
     $('.facedown2').hide()
     displayPlayer1()
-
+    displayPlayer2()
 }
 
 
@@ -82,6 +82,12 @@ function displayPlayer1() {
     }
 }
 // deck2.text() = deck 2 shuffledDeck.rank
+let $faceup2 = $('.faceup2')
+function displayPlayer2() {
+    for (let i = 0; i < player2.length - 1; i++) {
+        $faceup2.text(`${player2[i]}`)
+    }
+}
 
 
 
