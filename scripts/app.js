@@ -59,6 +59,8 @@ console.log(player2)
 let $draw = $('.draw')
 $draw.click(gamePlay)
 
+
+
 // game play function
 // in gameplay function
 //hide images
@@ -66,29 +68,30 @@ $draw.click(gamePlay)
 function gamePlay() {
     $('.facedown1').hide()
     $('.facedown2').hide()
-    
-    
-    // ="url('https://opengameart.org/sites/default/files/card%20back%20red.png').style.display = 'none'"
+    displayPlayer1()
+
 }
 
 
 
 // deck1.text() = deck 1 shuffledDeck.rank
-
-
-
-
-
+let $faceup1 = $('.faceup1')
+function displayPlayer1() {
+    for (let i = 0; i < player1.length - 1; i++) {
+        $faceup1.text(`${player1[i]}`)
+    }
+}
 // deck2.text() = deck 2 shuffledDeck.rank
+
 
 
 
 
 // restart button
 let $nextCard = $('.nextCard')
-$nextCard.click(newRound)
+$nextCard.click(nextCard)
 
-function newRound(){
+function nextCard() {
     $('.facedown1').show()
     $('.facedown2').show()
 }
@@ -97,10 +100,14 @@ function newRound(){
 let $newGame = $('.newGame')
 $newGame.click(newGame)
 
-function newGame(){
+function newGame() {
     $('.facedown1').show()
     $('.facedown2').show()
 }
 
+// score 
+// compare cards
 
 
+// discard pile array -> push used cards
+// would need to set decks back up after new game button clicked
