@@ -4,14 +4,17 @@ body {
     text-align: center;
     justify-content: center;
 }
+
 h1 {
     color: salmon;
     font-size: 50px;
     text-decoration: underline;
 }
+
 h2 {
     color: brown;
 }
+
 .rules {
     background-color: salmon;
     color: brown;
@@ -26,6 +29,7 @@ h2 {
     font-size: 18px;
     white-space: pre-line;
 }
+
 .gametable {
     background-color: darkgreen;
     height: 600px;
@@ -33,7 +37,7 @@ h2 {
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
-    align-items: center; 
+    align-items: center;
     align-content: center;
     flex-direction: row;
     border: solid;
@@ -41,34 +45,81 @@ h2 {
     border-color: brown;
     border-radius: 5%;
     flex-wrap: wrap;
+    z-index: -10;
 }
+
 .deck1 {
-    background-image: url("https://opengameart.org/sites/default/files/card%20back%20red.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: salmon;
     height: 33%;
     width: 30%;
     border: solid;
     border-color: red;
     border-radius: 5%;
     margin: 30px;
+    position: relative;
 }
 
 .deck2 {
-    background-image: url("https://opengameart.org/sites/default/files/card%20back%20red.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: salmon;
     height: 33%;
     width: 30%;
     border: solid;
     border-color: red;
     border-radius: 5%;
     margin: 30px;
+    position: relative;
 }
+
+.faceup1 {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    border: solid;
+    border-color: red;
+    border-radius: 5%;
+    position: absolute;
+    z-index: 1;
+}
+
+.faceup2 {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    border: solid;
+    border-color: red;
+    border-radius: 5%;
+    position: absolute;
+    z-index: 1;
+}
+
+.facedown1 {
+    background-image: url("https://opengameart.org/sites/default/files/card%20back%20red.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    border: solid;
+    border-color: red;
+    border-radius: 5%;
+    z-index: 2;
+    position: absolute;
+}
+
+.facedown2 {
+    background-image: url("https://opengameart.org/sites/default/files/card%20back%20red.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    border: solid;
+    border-color: red;
+    border-radius: 5%;
+    z-index: 2;
+    position: absolute;
+}
+
 .score1 {
     background-color: salmon;
     color: brown;
@@ -81,6 +132,7 @@ h2 {
     margin: 10px;
     margin-bottom: 40px;
 }
+
 .score2 {
     background-color: salmon;
     color: brown;
@@ -93,6 +145,7 @@ h2 {
     margin: 10px;
     margin-bottom: 40px;
 }
+
 .draw {
     background-color: slateblue;
     color: yellow;
@@ -108,6 +161,7 @@ h2 {
     align-self: center;
     flex-wrap: wrap;
 }
+
 .restart {
     background-color: rgb(51, 36, 151);
     color: yellow;
@@ -121,9 +175,11 @@ h2 {
     align-self: center;
     flex-wrap: wrap;
 }
+
 .value1 {
     font-size: 60px;
 }
+
 .value2 {
     font-size: 60px;
 }

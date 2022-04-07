@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
     <script src="./scripts/app.js" defer></script>
-    <script src="jquery-3.6.0.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>War</title>
 </head>
+
 <body>
     <h1><strong>War!</strong></h1>
     <div class="rules">RULES:&#10;Draw a card - Highest card wins&#10;If your cards tie, draw again&#10;First to 10 points is the winner</div>
@@ -21,10 +23,17 @@
             <div class="text1">Player 2:</div>
             <div class="value2">0</div>
         </div>
-        <div class="deck1"></div>
-        <div class="deck2"></div>
+        <div class="deck1">
+            <div class="facedown1"></div>
+            <div class="faceup1"></div>
+        </div>
+        <div class="deck2">
+            <div class="facedown2"></div>
+            <div class="faceup2"></div>
+        </div>
         <button class="draw"><strong>DRAW</strong></button>
         <button class="restart">Restart</button>
     </div>
 </body>
+
 </html>

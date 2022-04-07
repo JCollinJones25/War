@@ -30,12 +30,12 @@ class Deck {
 }
 const deck1 = new Deck()
 deck1.draw()
-console.log(deck1)
+// console.log(deck1)
 
 // shuffle the deck and divide by two
 // custom sort method found on DEV
 const shuffledDeck = deck1.cards.sort((a, b) => .5 - Math.random())
-console.log(shuffledDeck)
+// console.log(shuffledDeck)
 
 
 // Fisher-Yates Algorithm found on DEV
@@ -64,19 +64,37 @@ console.log(shuffledDeck)
 // deck1 = shuffledDeck[0 - 25]
 // deck2 = shuffledDeck[26 - 52]
 
-let player1 = shuffledDeck[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
-     12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
-// for (let i = 0; i < shuffledDeck[26]; i++) {
-//     shuffledDeck.push(player1)
-// }
+// let player1 = shuffledDeck[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
+//      12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+let player1 = []
+for (let i = 0; i < shuffledDeck.length / 2; i++) {
+    // console.log(shuffledDeck[i])
+    player1.push(shuffledDeck[i])
+}
 console.log(player1)
 
-let player2 = [26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 
-    39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51]
-// for (let i = 0; i < shuffledDeck[53] && i >= shuffledDeck[26]; i++) {
-//     shuffledDeck.push(player2)
-// }
+// let player2 = shuffledDeck[26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 
+//     39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51]
+let player2 = []
+for (let i = 26; i < shuffledDeck.length; i++) {
+    player2.push(shuffledDeck[i])
+}
 console.log(player2)
+
+
+// draw button
+let $draw = $('.draw')
+$draw.click(gamePlay)
+
+// game play function
+// in gameplay function
+//hide images
+//change text of div = player card
+function gamePlay() {
+    $('.deck1').hide()
+    // ="url('https://opengameart.org/sites/default/files/card%20back%20red.png').style.display = 'none'"
+}
+
 
 
 // deck1.text() = deck 1 shuffledDeck.rank
