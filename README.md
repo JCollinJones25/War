@@ -52,5 +52,6 @@ War is a simple card game where a single, standard deck of 52 cards is split in 
 * Winner is determined once certain score is reached
 
 ## Stretch Goals
+* give design to card when face up
 * Display text "War!" if there is a tie
 * give cards flip effect in css

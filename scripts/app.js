@@ -60,11 +60,7 @@ let $draw = $('.draw')
 $draw.click(gamePlay)
 
 
-
 // game play function
-// in gameplay function
-//hide images
-//change text of div = player card
 function gamePlay() {
     $('.facedown1').hide()
     $('.facedown2').hide()
@@ -73,43 +69,43 @@ function gamePlay() {
 }
 
 
-
 // deck1.text() = deck 1 shuffledDeck.rank
 let $faceup1 = $('.faceup1')
 function displayPlayer1() {
     for (let i = 0; i < player1.length - 1; i++) {
-        $faceup1.text(`${player1[i]}`)
+        // $faceup1.text(player1[i].cards)
+        $faceup1.text(`${player1[i].rank} of ${player1[i].suit}`)
     }
 }
+
 // deck2.text() = deck 2 shuffledDeck.rank
 let $faceup2 = $('.faceup2')
 function displayPlayer2() {
     for (let i = 0; i < player2.length - 1; i++) {
-        $faceup2.text(`${player2[i]}`)
+        // $faceup2.text(player2[i].cards)
+        $faceup2.text(`${player2[i].rank} of ${player2[i].suit}`)
+        
     }
 }
-
-
-
 
 
 // restart button
 let $nextCard = $('.nextCard')
 $nextCard.click(nextCard)
-
 function nextCard() {
     $('.facedown1').show()
     $('.facedown2').show()
 }
 
+
 // new game button
 let $newGame = $('.newGame')
 $newGame.click(newGame)
-
 function newGame() {
     $('.facedown1').show()
     $('.facedown2').show()
 }
+
 
 // score 
 // compare cards

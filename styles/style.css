@@ -160,7 +160,7 @@ h2 {
 }
 
 .nextCard {
-    background-color: slateblue;
+    background-color: blue;
     color: yellow;
     height: 50px;
     width: 65px;
@@ -173,7 +173,7 @@ h2 {
     flex-wrap: wrap;
 }
 .newGame { 
-    background-color: rgb(51, 36, 151);
+    background-color: rgb(47, 37, 115);
     color: yellow;
     height: auto;
     height: 50px;
