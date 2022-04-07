@@ -91,7 +91,9 @@ $draw.click(gamePlay)
 //hide images
 //change text of div = player card
 function gamePlay() {
-    $('.deck1').hide()
+    $('.facedown1').hide()
+    $('.facedown2').hide()
+
     // ="url('https://opengameart.org/sites/default/files/card%20back%20red.png').style.display = 'none'"
 }
 
