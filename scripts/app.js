@@ -35,12 +35,6 @@ deck1.draw()
 // custom sort method found on DEV
 const shuffledDeck = deck1.cards.sort((a, b) => .5 - Math.random())
 
-
-// divide shuffled deck between deck1 and deck2
-// use for loop to assign cards from shuffled deck to arrays of players decks
-// deck1 = shuffledDeck[0 - 25]
-// deck2 = shuffledDeck[26 - 52]
-
 let player1 = []
 for (let i = 0; i < shuffledDeck.length / 2; i++) {
     // console.log(shuffledDeck[i])
@@ -68,10 +62,6 @@ function gamePlay() {
 }
 
 
-// function displayPlayer1() {
-// }
-
-
 let $faceup1 = $('.faceup1')
 let $faceup2 = $('.faceup2')
 let $score1 = $('.value1')
@@ -81,31 +71,22 @@ let $score2 = $('.value2')
 // let addScore1 = $score1.innerHTML
 // let addScore2 = $score2.innerHTML
 
-function displayCards(event) {
+function displayCards() {
     for (let i = 0; i < player1.length; i++) {
         $faceup1.text(`${player1[i].rank} ${player1[i].suit}`)
-
         if (player1[i].score > player2[i].score) {
             $score1.text(+1)
+            //need better way of incrementing score 
         } else if (player2[i].score > player1[i].score) {
             $score2.text(+1)
+            //need better way of incrementing score 
+            
         }
     }
     for (let i = 0; i < player2.length; i++) {
         $faceup2.text(`${player2[i].rank} ${player2[i].suit}`)
-        
-        // discardPile2.push(player2[i])
-        // if (player2[i].score > player1[i].score) {
-        //     $score2.text(+1)
-        // }
     }
 }
-
-
-// score 
-// compare cards
-// function addPoint() {
-// }
 
 
 // next card button
@@ -116,25 +97,21 @@ discardPile2 = []
 function nextCard() {
     $('.facedown1').show()
     $('.facedown2').show()
-    for (let j = 0; j < player1.length; j++) {
-        $faceup1.text(`${player1[j].rank} ${player1[j].suit}`)
-    }
-    for (let j = 0; j < player2.length; j++) {
-        $faceup2.text(`${player2[j].rank} ${player2[j].suit}`)
-    }
+    player1.pop()
+    player2.pop()
 }
 
 
-    // new game button
-    let $newGame = $('.newGame')
-    $newGame.click(newGame)
-    function newGame() {
-        $('.facedown1').show()
-        $('.facedown2').show()
-        $score1.text('0')
-        $score2.text('0')
-
-    }
+// new game button
+let $newGame = $('.newGame')
+$newGame.click(newGame)
+function newGame() {
+    $('.facedown1').show()
+    $('.facedown2').show()
+    $score1.text('0')
+    $score2.text('0')
+// needs to get all cards back into player arrays
+}
 
 
 
