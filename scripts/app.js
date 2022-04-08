@@ -107,8 +107,8 @@ function displayCards() {
 function sliceCards() {
     let player1score = player1.slice(-1)
     let player2score = player2.slice(-1)
-    console.log(player1score)
-    console.log(player2score)
+    console.log(player1score[0].score)
+    console.log(player2score[0].score)
 }
 
 // why doesnt below work?? 
@@ -120,15 +120,15 @@ function sliceCards() {
 // console.log(player1score.Cards[0][1])
 // console.log(player2score.Cards[0][1])
 
-// function compareScores(){
-//     if (player1score.Cards[1] > player2score.Cards[1]) {
-//         $score1++
-//     } else if (player2score.Cards[1] > player1score.Cards[1]) {
-//         $score2++
-//     } else {
-//         return
-//     }
-// }
+function compareScores(){
+    if (player1score[0].score > player2score[0].score) {
+        $score1++
+    } else if (player2score[0].score > player1score[0].score) {
+        $score2++
+    } else {
+        return
+    }
+}
 
 
 
