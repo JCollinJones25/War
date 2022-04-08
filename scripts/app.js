@@ -58,6 +58,8 @@ scoreCount1 = 0
 scoreCount2 = 0
 discardPile1 = player1.pop()
 discardPile2 = player2.pop()
+// discardPile1 = []
+// discardPile2 = []
 let $nextCard = $('.nextCard')
 let $newGame = $('.newGame')
 gameIsOver = false
@@ -78,8 +80,6 @@ function gamePlay() {
     gameIsOver
    }
     isClicked = false
-    // storeDeck1()
-    // storeDeck2()
     // console.log(discardPile1)
 }
 
@@ -164,7 +164,7 @@ function newGame() {
     scoreCount1 = 0
     scoreCount2 = 0
     isClicked = true
-    reDeal()
+    // reDeal()
     // ?? needs to get all cards back into player arrays ??
 }
 
@@ -172,11 +172,11 @@ function newGame() {
 // discard pile array -> push used cards
 // would need to set decks back up after new game button clicked
 
-function reDeal(){
-    for (let i = 0; i < discardPile1.length; i++) {
-        player1.push(i)
-    }
-    for (let i = 0; i < discardPile2.length; i++) {
-        player2.push(i)
-    }
-}
+// function reDeal(){
+//     for (let i = 0; i < discardPile1.length; i++) {
+//         player1.push(i)
+//     }
+//     for (let i = 0; i < discardPile2.length; i++) {
+//         player2.push(i)
+//     }
+// }
