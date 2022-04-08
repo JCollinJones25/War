@@ -1,9 +1,6 @@
 
-// object of a deck of cards
-// object includes card rank, suit, and score
-// method below taken from own work done earlier in 
-// course on card game lab
-
+// class of cards and class of deck
+// cards includes card rank, suit, and score
 class Cards {
     constructor(suit, rank, score) {
         this.suit = suit
@@ -36,6 +33,8 @@ deck1.draw()
 // custom sort method found on DEV
 const shuffledDeck = deck1.cards.sort((a, b) => .5 - Math.random())
 
+
+// global variables
 let player1 = []
 for (let i = 0; i < shuffledDeck.length / 2; i++) {
     // console.log(shuffledDeck[i])
@@ -47,9 +46,23 @@ for (let i = 26; i < shuffledDeck.length; i++) {
     player2.push(shuffledDeck[i])
 }
 
+let $draw = $('.draw')
+let $faceup1 = $('.faceup1')
+let $faceup2 = $('.faceup2')
+let $tie = $('.tie')
+let $player1wins = $('.player1wins')
+let $player2wins = $('.player2wins')
+let $score1 = $('#value1')
+let $score2 = $('#value2')
+scoreCount1 = 0
+scoreCount2 = 0
+discardPile1 = player1.pop()
+discardPile2 = player2.pop()
+let $nextCard = $('.nextCard')
+let $newGame = $('.newGame')
+
 
 // draw button
-let $draw = $('.draw')
 $draw.click(gamePlay)
 
 
@@ -62,57 +75,29 @@ function gamePlay() {
     compareScores()
     gameOver()
     gameIsOver
-    $tie.hide()
-    $player1wins.hide()
-    $player2wins.hide()
+    // storeDeck1()
+    // storeDeck2()
+    if (scoreCount1 === 10){
+        $score2.text(0)
+    }
+    if (scoreCount2 === 10){
+        $score1.text(0)
+    }
 }
-
-
-let $faceup1 = $('.faceup1')
-let $faceup2 = $('.faceup2')
 
 
 function displayCards() {
     for (let i = 0; i < player1.length; i++) {
-        $faceup1.text(`${player1[i].rank} ${player1[i].suit}`)
+        $faceup1.text(`${player1[i].rank} of ${player1[i].suit}`)
     }
     for (let i = 0; i < player2.length; i++) {
-        $faceup2.text(`${player2[i].rank} ${player2[i].suit}`)
+        $faceup2.text(`${player2[i].rank} of ${player2[i].suit}`)
     }
 }
 
-//above function is displaying last card in array
-// last cards pop
-// therefore we need to iterate backwards through 
-// the array to display scores
-
-
-// DO I NEED THIS FUNCTION? (iterating backwards)
-// function getScores() {
-//     for (let i = player1.length - 1; i >= 0; i--) {
-//         // console.log(player1score)
-//     }
-//     for (let i = player2.length - 1; i >= 0; i--) {
-//         // console.log(player2score)
-//     }
-// }
-
-
-// let addScore1 = score1.innerHTML
-// let addScore2 = score2.innerHTML
-// let score1Display = score1
-// let score2Display = score2
 
 //sclice(-1) is accessing last index
 // store last index in variable
-let $tie = $('.tie')
-let $player1wins = $('.player1wins')
-let $player2wins = $('.player2wins')
-let $score1 = $('#value1')
-let $score2 = $('#value2')
-scoreCount1 = 0
-scoreCount2 = 0
-
 function compareScores() {
     let player1score = player1.slice(-1)
     let player2score = player2.slice(-1)
@@ -122,15 +107,17 @@ function compareScores() {
     } else if (player2score[0].score > player1score[0].score && scoreCount2 < 10) {
         scoreCount2 += 1
         $score2.text(`${scoreCount2}`)
-    } else {
+    } else if (player2score[0].score === player1score[0].score) {
         $tie.show()
-        return
+    } else {
+        console.log('not adding score')
     }
-    console.log(player1score[0].score)
-    console.log(player2score[0].score)
-    console.log(scoreCount1)
-    console.log(scoreCount2)
+    console.log(`Card1 Value: ${player1score[0].score}`)
+    console.log(`Card2 Value: ${player2score[0].score}`)
+    console.log(`Player 1 Score: ${scoreCount1}`)
+    console.log(`Player 2 Score: ${scoreCount2}`)
 }
+
 
 // gameover function
 function gameOver() {
@@ -141,17 +128,13 @@ function gameOver() {
         $player2wins.show()
         gameIsOver === true
     } else {
-        console.log('game still being played')
+        console.log('Game in progress')
     }
 }
 
 
-
 // next card button
-let $nextCard = $('.nextCard')
 $nextCard.click(nextCard)
-discardPile1 = []
-discardPile2 = []
 function nextCard() {
     $('.facedown1').show()
     $('.facedown2').show()
@@ -160,27 +143,43 @@ function nextCard() {
     $tie.hide()
     $player1wins.hide()
     $player2wins.hide()
+    if (gameIsOver === true){
+        return
+    }
 }
 
 
 // new game button
-let $newGame = $('.newGame')
 $newGame.click(newGame)
 function newGame() {
     $('.facedown1').show()
     $('.facedown2').show()
-    $score1.text(0)
-    $score2.text(0)
-    player1.pop()
-    player2.pop()
+    // player1.pop()
+    // player2.pop()
     $tie.hide()
     $player1wins.hide()
     $player2wins.hide()
+    $score1.text(0)
+    $score2.text(0)
     scoreCount1 = 0
     scoreCount2 = 0
+    // gameIsOver
     // ?? needs to get all cards back into player arrays ??
 }
 
 
 // discard pile array -> push used cards
 // would need to set decks back up after new game button clicked
+
+
+console.log(discardPile1)
+// function storeDeck1(){
+//     for (let i =  player1.length -1; i >= 0; i--){
+//         discardPile1.push(player1)
+//     }
+// }
+// function storeDeck2(){
+//     for (let i =  player2.length -1; i >= 0; i--){
+//         discardPile2.push(player2)
+//     }
+// }
