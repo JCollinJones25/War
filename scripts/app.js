@@ -58,9 +58,8 @@ function gamePlay() {
     $('.facedown1').hide()
     $('.facedown2').hide()
     displayCards()
-    sliceCards()
-    // getScores()
-    // compareScores()
+    compareScores()
+    // sliceCards()
 }
 
 
@@ -103,31 +102,18 @@ function displayCards() {
 
 //sclice(-1) is accessing last index
 // store last index in variable
-// shows card as array(0)
-function sliceCards() {
+function compareScores(){
     let player1score = player1.slice(-1)
     let player2score = player2.slice(-1)
-    console.log(player1score[0].score)
-    console.log(player2score[0].score)
-}
-
-// why doesnt below work?? 
-
-// console.log(player1score.Cards[1])
-// console.log(player2score.Cards[1])
-
-// -----------OR-------------
-// console.log(player1score.Cards[0][1])
-// console.log(player2score.Cards[0][1])
-
-function compareScores(){
     if (player1score[0].score > player2score[0].score) {
-        $score1++
+        $score1.text(+1)
     } else if (player2score[0].score > player1score[0].score) {
-        $score2++
+        $score2.text(+1)
     } else {
         return
     }
+    console.log(player1score[0].score)
+    console.log(player2score[0].score)
 }
 
 
@@ -152,8 +138,10 @@ $newGame.click(newGame)
 function newGame() {
     $('.facedown1').show()
     $('.facedown2').show()
-    $score1.text('0')
-    $score2.text('0')
+    $score1.text(0)
+    $score2.text(0)
+    player1.pop()
+    player2.pop()
     // ?? needs to get all cards back into player arrays ??
 }
 
