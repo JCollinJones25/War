@@ -58,6 +58,7 @@ function gamePlay() {
     $('.facedown1').hide()
     $('.facedown2').hide()
     displayCards()
+    sliceCards()
     // getScores()
     // compareScores()
 }
@@ -142,7 +143,6 @@ function nextCard() {
     $('.facedown2').show()
     player1.pop()
     player2.pop()
-    sliceCards()
 }
 
 
