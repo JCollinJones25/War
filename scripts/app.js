@@ -115,8 +115,10 @@ function compareScores() {
     let player2score = player2.slice(-1)
     if (player1score[0].score > player2score[0].score) {
         scoreCount1 += 1
+        $score1.text(`${scoreCount1}`)
     } else if (player2score[0].score > player1score[0].score) {
         scoreCount2 += 1
+        $score2.text(`${scoreCount2}`)
     } else {
         $tie.show()
         return
