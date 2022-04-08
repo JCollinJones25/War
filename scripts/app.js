@@ -124,10 +124,10 @@ function compareScores() {
 function gameOver() {
     if (scoreCount1 === 10) {
         $player1wins.show()
-        gameIsOver === true
+        gameIsOver = true
     } else if (scoreCount2 === 10) {
         $player2wins.show()
-        gameIsOver === true
+        gameIsOver = true
     } else {
         console.log('Game in progress')
     }
@@ -142,8 +142,6 @@ function nextCard() {
     player1.pop()
     player2.pop()
     $tie.hide()
-    $player1wins.hide()
-    $player2wins.hide()
     if (gameIsOver === true){
         return
     }
@@ -166,7 +164,7 @@ function newGame() {
     scoreCount1 = 0
     scoreCount2 = 0
     isClicked = true
-    // gameIsOver
+    reDeal()
     // ?? needs to get all cards back into player arrays ??
 }
 
@@ -174,14 +172,11 @@ function newGame() {
 // discard pile array -> push used cards
 // would need to set decks back up after new game button clicked
 
-
-// function storeDeck1(){
-//     for (let i =  player1.length -1; i >= 0; i--){
-//         discardPile1.push(player1)
-//     }
-// }
-// function storeDeck2(){
-//     for (let i =  player2.length -1; i >= 0; i--){
-//         discardPile2.push(player2)
-//     }
-// }
+function reDeal(){
+    for (let i = 0; i < discardPile1.length; i++) {
+        player1.push(i)
+    }
+    for (let i = 0; i < discardPile2.length; i++) {
+        player2.push(i)
+    }
+}
