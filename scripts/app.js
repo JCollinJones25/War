@@ -59,7 +59,7 @@ function gamePlay() {
     $('.facedown2').hide()
     displayCards()
     compareScores()
-    // sliceCards()
+    gameOver()
 }
 
 
@@ -102,20 +102,36 @@ function displayCards() {
 
 //sclice(-1) is accessing last index
 // store last index in variable
-function compareScores(){
+let $tie = $('.tie')
+let $player1wins = $('.player1wins')
+let $player2wins = $('.player2wins')
+function compareScores() {
     let player1score = player1.slice(-1)
     let player2score = player2.slice(-1)
-    if (player1score[0].score > player2score[0].score) {
-        $score1.text(+1)
-    } else if (player2score[0].score > player1score[0].score) {
-        $score2.text(+1)
-    } else {
-        return
+    for (let i = 0; i <= 10; i++) {
+        if (player1score[0].score > player2score[0].score) {
+            $score1.text(+10)
+        } else if (player2score[0].score > player1score[0].score) {
+            $score2.text(+10)
+        } else {
+            $tie.show()
+            return
+        }
     }
     console.log(player1score[0].score)
     console.log(player2score[0].score)
 }
 
+// gameover function
+function gameOver() {
+    if ($score1 === 10) {
+        $player1wins.show()
+    } else if ($score2 === 10) {
+        $player2wins.show()
+    } else {
+        console.log('game still being played')
+    }
+}
 
 
 
@@ -129,6 +145,7 @@ function nextCard() {
     $('.facedown2').show()
     player1.pop()
     player2.pop()
+    $tie.hide()
 }
 
 
@@ -142,6 +159,7 @@ function newGame() {
     $score2.text(0)
     player1.pop()
     player2.pop()
+    $tie.hide()
     // ?? needs to get all cards back into player arrays ??
 }
 

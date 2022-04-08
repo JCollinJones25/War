@@ -204,3 +204,36 @@ h2 {
 .value2 {
     font-size: 60px;
 }
+.tie {
+    display: none;
+    font-size: 35px;
+    color: red;
+    z-index: 100;
+    flex-wrap: wrap;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    top: 445px;
+}
+.player1wins {
+    display: none;
+    font-size: 35px;
+    color: red;
+    z-index: 100;
+    flex-wrap: wrap;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    top: 445px;
+}
+.player2wins {
+    display: none;
+    font-size: 35px;
+    color: red;
+    z-index: 100;
+    flex-wrap: wrap;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    top: 445px;
+}
