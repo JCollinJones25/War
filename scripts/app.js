@@ -61,7 +61,7 @@ discardPile2 = player2.pop()
 let $nextCard = $('.nextCard')
 let $newGame = $('.newGame')
 gameIsOver = false
-
+isClicked = true
 
 // draw button
 $draw.click(gamePlay)
@@ -69,14 +69,18 @@ $draw.click(gamePlay)
 
 // game play function
 function gamePlay() {
+   if (isClicked === true){
     $('.facedown1').hide()
     $('.facedown2').hide()
     displayCards()
     compareScores()
     gameOver()
     gameIsOver
+   }
+    isClicked = false
     // storeDeck1()
     // storeDeck2()
+    // console.log(discardPile1)
 }
 
 // display cards function
@@ -99,9 +103,11 @@ function compareScores() {
     if (player1score[0].score > player2score[0].score && scoreCount1 < 10 && scoreCount2 !== 10) {
         scoreCount1 += 1
         $score1.text(`${scoreCount1}`)
+        return
     } else if (player2score[0].score > player1score[0].score && scoreCount2 < 10 && scoreCount1 !== 10) {
         scoreCount2 += 1
         $score2.text(`${scoreCount2}`)
+        return
     } else if (player2score[0].score === player1score[0].score) {
         $tie.show()
     } else {
@@ -141,6 +147,7 @@ function nextCard() {
     if (gameIsOver === true){
         return
     }
+    isClicked = true
 }
 
 
@@ -158,6 +165,7 @@ function newGame() {
     $score2.text(0)
     scoreCount1 = 0
     scoreCount2 = 0
+    isClicked = true
     // gameIsOver
     // ?? needs to get all cards back into player arrays ??
 }
@@ -167,7 +175,6 @@ function newGame() {
 // would need to set decks back up after new game button clicked
 
 
-console.log(discardPile1)
 // function storeDeck1(){
 //     for (let i =  player1.length -1; i >= 0; i--){
 //         discardPile1.push(player1)
