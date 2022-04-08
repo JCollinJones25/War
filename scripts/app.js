@@ -58,7 +58,7 @@ function gamePlay() {
     $('.facedown1').hide()
     $('.facedown2').hide()
     displayCards()
-    getScores()
+    // getScores()
     // compareScores()
 }
 
@@ -83,7 +83,7 @@ function displayCards() {
 }
 
 //above function is displaying last card in array
-// last cards pops
+// last cards pop
 // therefore we need to iterate backwards through 
 // the array to display scores
 
@@ -91,24 +91,24 @@ function displayCards() {
 // scoreCount2 = 0
 
 // DO I NEED THIS FUNCTION? (iterating backwards)
-function getScores() {
-    for (let i = player1.length - 1; i >= 0; i--) {
-        // console.log(player1score)
-    }
-    for (let i = player2.length - 1; i >= 0; i--) {
-        // console.log(player2score)
-    }
-}
-
+// function getScores() {
+//     for (let i = player1.length - 1; i >= 0; i--) {
+//         // console.log(player1score)
+//     }
+//     for (let i = player2.length - 1; i >= 0; i--) {
+//         // console.log(player2score)
+//     }
+// }
 
 //sclice(-1) is accessing last index
 // store last index in variable
-let player1score = player1.slice(-1)
-let player2score = player2.slice(-1)
-
 // shows card as array(0)
-console.log(player1score)
-console.log(player2score)
+function sliceCards() {
+    let player1score = player1.slice(-1)
+    let player2score = player2.slice(-1)
+    console.log(player1score)
+    console.log(player2score)
+}
 
 // why doesnt below work?? 
 
@@ -142,6 +142,7 @@ function nextCard() {
     $('.facedown2').show()
     player1.pop()
     player2.pop()
+    sliceCards()
 }
 
 
@@ -157,5 +158,5 @@ function newGame() {
 }
 
 
-// discard pile array -> push used cards
-// would need to set decks back up after new game button clicked
+                // discard pile array -> push used cards
+                // would need to set decks back up after new game button clicked
