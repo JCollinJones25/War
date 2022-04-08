@@ -47,10 +47,12 @@ War is a simple card game where a single, standard deck of 52 cards is split in 
 * Players must each have a deck (done)
 * Top card of deck should flip over when draw button is pressed (done)
 * Top card needs to be discarded so it doesn't stay on top of deck (done)
-* The value of the cards is compared
-* Player with the higher value card receives a point
-* Points are recorded for players
-* Winner is determined once certain score is reached
+* The value of the cards is compared (done)
+* Player with the higher value card receives a point (done)
+* Points are recorded for players (done)
+* Winner is determined once certain score is reached (done)
+* Score will stop recording after score limit
+* Edge Case: Draw button should not continue adding score if you keep clicking draw instead of getting new card
 
 ## Stretch Goals
 * Instead of having a 'next card' button, draw starts a timer and the table resets after the cards are revealed
