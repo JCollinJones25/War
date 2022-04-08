@@ -54,19 +54,19 @@ $draw.click(gamePlay)
 
 
 // game play function
+gameIsOver = false
 function gamePlay() {
     $('.facedown1').hide()
     $('.facedown2').hide()
     displayCards()
     compareScores()
     gameOver()
+    gameIsOver
 }
 
 
 let $faceup1 = $('.faceup1')
 let $faceup2 = $('.faceup2')
-let $score1 = $('#value1')
-let $score2 = $('#value2')
 
 
 function displayCards() {
@@ -99,37 +99,42 @@ function displayCards() {
 // let addScore2 = score2.innerHTML
 // let score1Display = score1
 // let score2Display = score2
-// scoreCount1 = 0
-// scoreCount2 = 0
 
 //sclice(-1) is accessing last index
 // store last index in variable
 let $tie = $('.tie')
 let $player1wins = $('.player1wins')
 let $player2wins = $('.player2wins')
+let $score1 = $('#value1')
+let $score2 = $('#value2')
+scoreCount1 = 0
+scoreCount2 = 0
+
 function compareScores() {
     let player1score = player1.slice(-1)
     let player2score = player2.slice(-1)
-    for (let i = 0; i <= 10; i++) {
-        if (player1score[0].score > player2score[0].score) {
-            $score1.text(i)
-        } else if (player2score[0].score > player1score[0].score) {
-            $score2.text(i)
-        } else {
-            $tie.show()
-            return
-        }
+    if (player1score[0].score > player2score[0].score) {
+        scoreCount1 += 1
+    } else if (player2score[0].score > player1score[0].score) {
+        scoreCount2 += 1
+    } else {
+        $tie.show()
+        return
     }
     console.log(player1score[0].score)
     console.log(player2score[0].score)
+    console.log(scoreCount1)
+    console.log(scoreCount2)
 }
 
 // gameover function
 function gameOver() {
-    if ($score1.text(10)) {
+    if (scoreCount1 === 10) {
         $player1wins.show()
-    } else if ($score2.text(10)) {
+        gameIsOver === true
+    } else if (scoreCount2 === 10) {
         $player2wins.show()
+        gameIsOver === true
     } else {
         console.log('game still being played')
     }
@@ -148,6 +153,8 @@ function nextCard() {
     player1.pop()
     player2.pop()
     $tie.hide()
+    $player1wins.hide()
+    $player2wins.hide()
 }
 
 
@@ -162,6 +169,8 @@ function newGame() {
     player1.pop()
     player2.pop()
     $tie.hide()
+    $player1wins.hide()
+    $player2wins.hide()
     // ?? needs to get all cards back into player arrays ??
 }
 
