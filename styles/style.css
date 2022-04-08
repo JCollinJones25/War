@@ -218,7 +218,7 @@ h2 {
 .player1wins {
     display: none;
     font-size: 35px;
-    color: red;
+    color: rgb(2, 183, 244);
     z-index: 100;
     flex-wrap: wrap;
     margin-top: 0;
@@ -229,7 +229,7 @@ h2 {
 .player2wins {
     display: none;
     font-size: 35px;
-    color: red;
+    color: rgb(5, 183, 243);
     z-index: 100;
     flex-wrap: wrap;
     margin-top: 0;

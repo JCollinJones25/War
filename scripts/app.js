@@ -67,10 +67,6 @@ let $faceup1 = $('.faceup1')
 let $faceup2 = $('.faceup2')
 let $score1 = $('#value1')
 let $score2 = $('#value2')
-// let addScore1 = score1.innerHTML
-// let addScore2 = score2.innerHTML
-// let score1Display = score1
-// let score2Display = score2
 
 
 function displayCards() {
@@ -87,8 +83,6 @@ function displayCards() {
 // therefore we need to iterate backwards through 
 // the array to display scores
 
-// scoreCount1 = 0
-// scoreCount2 = 0
 
 // DO I NEED THIS FUNCTION? (iterating backwards)
 // function getScores() {
@@ -100,6 +94,14 @@ function displayCards() {
 //     }
 // }
 
+
+// let addScore1 = score1.innerHTML
+// let addScore2 = score2.innerHTML
+// let score1Display = score1
+// let score2Display = score2
+// scoreCount1 = 0
+// scoreCount2 = 0
+
 //sclice(-1) is accessing last index
 // store last index in variable
 let $tie = $('.tie')
@@ -110,9 +112,9 @@ function compareScores() {
     let player2score = player2.slice(-1)
     for (let i = 0; i <= 10; i++) {
         if (player1score[0].score > player2score[0].score) {
-            $score1.text(+10)
+            $score1.text(i)
         } else if (player2score[0].score > player1score[0].score) {
-            $score2.text(+10)
+            $score2.text(i)
         } else {
             $tie.show()
             return
@@ -124,9 +126,9 @@ function compareScores() {
 
 // gameover function
 function gameOver() {
-    if ($score1 === 10) {
+    if ($score1.text(10)) {
         $player1wins.show()
-    } else if ($score2 === 10) {
+    } else if ($score2.text(10)) {
         $player2wins.show()
     } else {
         console.log('game still being played')
@@ -164,5 +166,5 @@ function newGame() {
 }
 
 
-                // discard pile array -> push used cards
-                // would need to set decks back up after new game button clicked
+// discard pile array -> push used cards
+// would need to set decks back up after new game button clicked
