@@ -57,6 +57,7 @@ function gamePlay() {
     $('.facedown1').hide()
     $('.facedown2').hide()
     displayCards()
+    addScore()
 }
 
 
@@ -71,22 +72,37 @@ let $faceup2 = $('.faceup2')
 
 score1 = 0
 score2 = 0
-console.log(player2[0].score)
-console.log(player1[0].score)
 
 function displayCards() {
     for (let i = 0; i < player1.length; i++) {
         $faceup1.text(`${player1[i].rank} ${player1[i].suit}`)
-        if (player1[i].score > player2[i].score) {
-            score1++
-            //need better way of incrementing score 
-        } else if (player2[i].score > player1[i].score) {
-            score2++
-            //need better way of incrementing score 
-        }
     }
     for (let i = 0; i < player2.length; i++) {
         $faceup2.text(`${player2[i].rank} ${player2[i].suit}`)
+    }
+}
+
+//above function is displaying last card in array
+// last cards pops
+// therefore we need to iterate backwards through 
+// the array to display scores
+function addScore() {
+    for (let i = player1.length - 1; i >= 0; i--) {
+        console.log(player1.slice(-1))
+       //slice(-1) is accessing last index
+
+    }
+    for (let i = player2.length -1; i >= 0; i--) {
+        console.log(player2.slice(-1))
+        //slice(-1) is accessing last index
+        
+        if (player1[i].score > player2[i].score) {
+            score1++
+        } else if (player2[i].score > player1[i].score) {
+            score2++
+        } else {
+            return
+        }
     }
 }
 
@@ -112,7 +128,7 @@ function newGame() {
     $('.facedown2').show()
     $score1.text('0')
     $score2.text('0')
-// needs to get all cards back into player arrays
+    // needs to get all cards back into player arrays
 }
 
 
