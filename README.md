@@ -1,4 +1,4 @@
-## WAR - Project One
+# WAR - Project One
 
 ## War Overview
 
@@ -43,15 +43,17 @@ War is a simple card game where a single, standard deck of 52 cards is split in 
 ![wireframe image](https://github.com/JCollinJones25/GA-proj-1-War/blob/main/proj-1-wireframe.png?raw=true)
 
 ## MVP
-* Deck must be shuffled (randomized) at start of game
-* Players must each have a deck
-* Top card of deck should flip over when draw button is pressed
+* Deck must be shuffled (randomized) at start of game (done)
+* Players must each have a deck (done)
+* Top card of deck should flip over when draw button is pressed (done)
+* Top card needs to be discarded so it doesn't stay on top of deck (done)
 * The value of the cards is compared
 * Player with the higher value card receives a point
 * Points are recorded for players
 * Winner is determined once certain score is reached
 
 ## Stretch Goals
+* Instead of having a 'next card' button, draw starts a timer and the table resets after the cards are revealed
 * give design to card when face up
 * Display text "War!" if there is a tie
 * give cards flip effect in css
