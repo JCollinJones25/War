@@ -77,12 +77,6 @@ function gamePlay() {
     gameIsOver
     // storeDeck1()
     // storeDeck2()
-    if (scoreCount1 === 10){
-        $score2.text(0)
-    }
-    if (scoreCount2 === 10){
-        $score1.text(0)
-    }
 }
 
 // display cards function
@@ -102,10 +96,10 @@ function displayCards() {
 function compareScores() {
     let player1score = player1.slice(-1)
     let player2score = player2.slice(-1)
-    if (player1score[0].score > player2score[0].score && scoreCount1 < 10) {
+    if (player1score[0].score > player2score[0].score && scoreCount1 < 10 && scoreCount2 !== 10) {
         scoreCount1 += 1
         $score1.text(`${scoreCount1}`)
-    } else if (player2score[0].score > player1score[0].score && scoreCount2 < 10) {
+    } else if (player2score[0].score > player1score[0].score && scoreCount2 < 10 && scoreCount1 !== 10) {
         scoreCount2 += 1
         $score2.text(`${scoreCount2}`)
     } else if (player2score[0].score === player1score[0].score) {
