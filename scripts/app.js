@@ -40,13 +40,11 @@ for (let i = 0; i < shuffledDeck.length / 2; i++) {
     // console.log(shuffledDeck[i])
     player1.push(shuffledDeck[i])
 }
-console.log(player1)
 
 let player2 = []
 for (let i = 26; i < shuffledDeck.length; i++) {
     player2.push(shuffledDeck[i])
 }
-console.log(player2)
 
 
 // draw button
@@ -64,8 +62,8 @@ function gamePlay() {
 
 let $faceup1 = $('.faceup1')
 let $faceup2 = $('.faceup2')
-let $score1 = $('.value1')
-let $score2 = $('.value2')
+let $score1 = $('#value1')
+let $score2 = $('#value2')
 // parseInt($score1.innerHTML)
 // parseInt($score2.innerHTML)
 // let addScore1 = $score1.innerHTML
@@ -75,12 +73,13 @@ function displayCards() {
     for (let i = 0; i < player1.length; i++) {
         $faceup1.text(`${player1[i].rank} ${player1[i].suit}`)
         if (player1[i].score > player2[i].score) {
-            $score1.text(+1)
+            $score1++
+            console.log(player1[0].score)
             //need better way of incrementing score 
         } else if (player2[i].score > player1[i].score) {
-            $score2.text(+1)
+            $score2++
+            console.log(player2[0].score)
             //need better way of incrementing score 
-            
         }
     }
     for (let i = 0; i < player2.length; i++) {
