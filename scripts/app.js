@@ -63,15 +63,13 @@ function gamePlay() {
 
 let $faceup1 = $('.faceup1')
 let $faceup2 = $('.faceup2')
-// let $score1 = $('#value1')
-// let $score2 = $('#value2')
-// parseInt($score1.innerHTML)
-// parseInt($score2.innerHTML)
-// let addScore1 = $score1.innerHTML
-// let addScore2 = $score2.innerHTML
+let score1 = document.getElementById('#value1')
+let score2 = document.getElementById('#value2')
+// let addScore1 = score1.innerHTML
+// let addScore2 = score2.innerHTML
+// let score1Display = score1
+// let score2Display = score2
 
-score1 = 0
-score2 = 0
 
 function displayCards() {
     for (let i = 0; i < player1.length; i++) {
@@ -86,23 +84,25 @@ function displayCards() {
 // last cards pops
 // therefore we need to iterate backwards through 
 // the array to display scores
+
+//sclice(-1) is accessing last index
+// store last index in variable
+let player1score = player1.slice(-1)
+let player2score = player2.slice(-1)
 function addScore() {
     for (let i = player1.length - 1; i >= 0; i--) {
-        console.log(player1.slice(-1))
-       //slice(-1) is accessing last index
-
-    }
-    for (let i = player2.length -1; i >= 0; i--) {
-        console.log(player2.slice(-1))
-        //slice(-1) is accessing last index
-        
-        if (player1[i].score > player2[i].score) {
+        console.log(player1score)
+        if (player1.slice(-1).score > player2.slice(-1).score) {
             score1++
-        } else if (player2[i].score > player1[i].score) {
+        } else if (player2.slice(-1).score > player1.slice(-1).score) {
             score2++
         } else {
             return
         }
+    }
+    for (let i = player2.length -1; i >= 0; i--) {
+        // console.log(player2score)
+        
     }
 }
 
