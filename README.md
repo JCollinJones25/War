@@ -28,10 +28,6 @@ War is a simple card game where a single, standard deck of 52 cards is split in 
 * cards added to winners deck if playing biggest deck winning system OR points added to scoreboard if playing point system 
 * for next round, cards transition away like slideshow and next card is either revealed or hiding behind back of card until clicked. 
 
-## Styling considerations
-* front of card should be just number and either words saying suit or image of suit (4 pictures will take a lot less time to store in code rather than 52 images - one for each individual card)
-* deck1 and deck2 divs can be image of back of card
-
 ## User Stories
 * As a user:
 - I want to draw the top card from my deck
@@ -57,6 +53,8 @@ War is a simple card game where a single, standard deck of 52 cards is split in 
 
 ## Stretch Goals
 * As the game stands, the cards are popped/discarded out of the deck. Cards need to be put back into array (deck) when new game button is clicked.
+* front of card should be just number and either words saying suit or image of suit (4 pictures will take a lot less time to store in code rather than 52 images - one for each individual card)
+* deck1 and deck2 divs can be image of back of card
 * Instead of having a 'next card' button, draw starts a timer and the table resets after the cards are revealed
 * give design to card when face up
 * Display text "War!" if there is a tie
