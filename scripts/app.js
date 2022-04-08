@@ -62,23 +62,26 @@ function gamePlay() {
 
 let $faceup1 = $('.faceup1')
 let $faceup2 = $('.faceup2')
-let $score1 = $('#value1')
-let $score2 = $('#value2')
+// let $score1 = $('#value1')
+// let $score2 = $('#value2')
 // parseInt($score1.innerHTML)
 // parseInt($score2.innerHTML)
 // let addScore1 = $score1.innerHTML
 // let addScore2 = $score2.innerHTML
 
+score1 = 0
+score2 = 0
+console.log(player2[0].score)
+console.log(player1[0].score)
+
 function displayCards() {
     for (let i = 0; i < player1.length; i++) {
         $faceup1.text(`${player1[i].rank} ${player1[i].suit}`)
         if (player1[i].score > player2[i].score) {
-            $score1++
-            console.log(player1[0].score)
+            score1++
             //need better way of incrementing score 
         } else if (player2[i].score > player1[i].score) {
-            $score2++
-            console.log(player2[0].score)
+            score2++
             //need better way of incrementing score 
         }
     }
