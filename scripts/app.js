@@ -60,6 +60,7 @@ discardPile1 = player1.pop()
 discardPile2 = player2.pop()
 let $nextCard = $('.nextCard')
 let $newGame = $('.newGame')
+gameIsOver = false
 
 
 // draw button
@@ -67,7 +68,6 @@ $draw.click(gamePlay)
 
 
 // game play function
-gameIsOver = false
 function gamePlay() {
     $('.facedown1').hide()
     $('.facedown2').hide()
@@ -85,7 +85,7 @@ function gamePlay() {
     }
 }
 
-
+// display cards function
 function displayCards() {
     for (let i = 0; i < player1.length; i++) {
         $faceup1.text(`${player1[i].rank} of ${player1[i].suit}`)
@@ -96,6 +96,7 @@ function displayCards() {
 }
 
 
+// compare scores function
 //sclice(-1) is accessing last index
 // store last index in variable
 function compareScores() {
