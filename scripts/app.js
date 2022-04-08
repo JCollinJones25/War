@@ -173,6 +173,8 @@ function newGame() {
     $tie.hide()
     $player1wins.hide()
     $player2wins.hide()
+    scoreCount1 = 0
+    scoreCount2 = 0
     // ?? needs to get all cards back into player arrays ??
 }
 
