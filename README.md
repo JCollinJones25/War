@@ -51,7 +51,7 @@ War is a simple card game where a single, standard deck of 52 cards is split in 
 * Player with the higher value card receives a point (done)
 * Points are recorded for players (done)
 * Winner is determined once certain score is reached (done)
-* Score will stop recording after score limit
+* Score will stop recording after score limit (done)
 * Edge Case: Draw button should not continue adding score if you keep clicking draw instead of getting new card
 
 ## Stretch Goals
