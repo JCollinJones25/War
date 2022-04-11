@@ -67,6 +67,8 @@ let $nextCard = $('.nextCard')
 let $newGame = $('.newGame')
 gameIsOver = false
 isClicked = true
+let $cardsRemaining1 = $('.cardsRemaining1')
+let $cardsRemaining2 = $('.cardsRemaining2')
 
 
 // draw button
@@ -96,6 +98,14 @@ function displayCards() {
         $faceup2.text(`${player2[i].rank} of ${player2[i].suit}`)
     }
 }
+
+
+//display cards remaining function
+function cardsRemaining(){
+    $cardsRemaining1.text(`Cards Remaining: ${player1.length}`)
+    $cardsRemaining2.text(`Cards Remaining: ${player2.length}`)
+}
+cardsRemaining()
 
 
 // compare scores function
@@ -150,6 +160,7 @@ function nextCard() {
     isClicked = true
     player1.pop()
     player2.pop()
+    cardsRemaining()
 }
 
 
@@ -168,5 +179,6 @@ function newGame() {
     isClicked = true
     gameIsOver = false
     reDeal()
+    cardsRemaining()
 }
 
