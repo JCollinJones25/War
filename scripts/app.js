@@ -156,10 +156,10 @@ function compareScores() {
 
 // gameover function
 function gameOver() {
-    if (scoreCount1 === 10) {
+    if (scoreCount1 >= 10) {
         $player1wins.show()
         gameIsOver = true
-    } else if (scoreCount2 === 10) {
+    } else if (scoreCount2 >= 10) {
         $player2wins.show()
         gameIsOver = true
     } else {
