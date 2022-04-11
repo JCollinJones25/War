@@ -29,20 +29,20 @@ class Deck {
 
 let player1, player2
 
-function reDeal(){
+function reDeal() {
     const deck1 = new Deck()
     deck1.draw()
-    
+
     // shuffle the deck and divide by two
     // custom sort method found on DEV
     const shuffledDeck = deck1.cards.sort((a, b) => .5 - Math.random())
-    
+
     player1 = []
     for (let i = 0; i < shuffledDeck.length / 2; i++) {
         // console.log(shuffledDeck[i])
         player1.push(shuffledDeck[i])
     }
-    
+
     player2 = []
     for (let i = 26; i < shuffledDeck.length; i++) {
         player2.push(shuffledDeck[i])
@@ -67,6 +67,8 @@ let $nextCard = $('.nextCard')
 let $newGame = $('.newGame')
 gameIsOver = false
 isClicked = true
+// wonDraw = false
+// isATie = false
 let $cardsRemaining1 = $('.cardsRemaining1')
 let $cardsRemaining2 = $('.cardsRemaining2')
 
@@ -77,13 +79,14 @@ $draw.click(gamePlay)
 
 // game play function
 function gamePlay() {
-    if (isClicked === true){
+    if (isClicked === true) {
         $('.facedown1').hide()
         $('.facedown2').hide()
         displayCards()
         compareScores()
         gameOver()
         gameIsOver
+        // tieBreaker()
     }
     isClicked = false
 }
@@ -101,7 +104,7 @@ function displayCards() {
 
 
 //display cards remaining function
-function cardsRemaining(){
+function cardsRemaining() {
     $cardsRemaining1.text(`Cards Remaining: ${player1.length}`)
     $cardsRemaining2.text(`Cards Remaining: ${player2.length}`)
 }
@@ -117,13 +120,18 @@ function compareScores() {
     if (player1score[0].score > player2score[0].score && scoreCount1 < 10 && scoreCount2 !== 10) {
         scoreCount1 += 1
         $score1.text(`${scoreCount1}`)
+        // wonDraw = true
         return
     } else if (player2score[0].score > player1score[0].score && scoreCount2 < 10 && scoreCount1 !== 10) {
         scoreCount2 += 1
         $score2.text(`${scoreCount2}`)
+        // wonDraw = true
         return
     } else if (player2score[0].score === player1score[0].score) {
         $tie.show()
+        // isATie = true
+        tieBreaker()
+        return
     } else {
         console.log('not adding score')
     }
@@ -131,6 +139,33 @@ function compareScores() {
     console.log(`Card2 Value: ${player2score[0].score}`)
     console.log(`Player 1 Score: ${scoreCount1}`)
     console.log(`Player 2 Score: ${scoreCount2}`)
+}
+
+
+// tie breaker function
+function tieBreaker() {
+    // if (isATie === true) {
+    let player1score = player1.slice(-1)
+    let player2score = player2.slice(-1)
+    if (player1score[0].score > player2score[0].score && scoreCount1 < 10 && scoreCount2 !== 10) {
+        scoreCount1 += 2
+        $score1.text(`${scoreCount1}`)
+        // wonDraw = true
+        return
+    } if (player2score[0].score > player1score[0].score && scoreCount2 < 10 && scoreCount1 !== 10) {
+        scoreCount2 += 2
+        $score2.text(`${scoreCount2}`)
+        // wonDraw = true
+        return
+    } //else if (player2score[0].score === player1score[0].score) {
+    // $tie.show()
+    // isATie = true
+    // tieBreaker()
+    // return
+    // } else {
+    //   console.log('not adding score')
+    // }
+    // }
 }
 
 
@@ -151,16 +186,18 @@ function gameOver() {
 // next card button
 $nextCard.click(nextCard)
 function nextCard() {
-    $('.facedown1').show()
-    $('.facedown2').show()
-    $tie.hide()
-    if (gameIsOver === true){
-        return
+    if (isClicked === false) {
+        $('.facedown1').show()
+        $('.facedown2').show()
+        $tie.hide()
+        if (gameIsOver === true) {
+            return
+        }
+        player1.pop()
+        player2.pop()
+        cardsRemaining()
     }
     isClicked = true
-    player1.pop()
-    player2.pop()
-    cardsRemaining()
 }
 
 
