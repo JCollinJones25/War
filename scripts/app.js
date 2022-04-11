@@ -67,8 +67,7 @@ let $nextCard = $('.nextCard')
 let $newGame = $('.newGame')
 gameIsOver = false
 isClicked = true
-// wonDraw = false
-// isATie = false
+isATie = false
 let $cardsRemaining1 = $('.cardsRemaining1')
 let $cardsRemaining2 = $('.cardsRemaining2')
 
@@ -86,7 +85,7 @@ function gamePlay() {
         compareScores()
         gameOver()
         gameIsOver
-        // tieBreaker()
+        isATie
     }
     isClicked = false
 }
@@ -120,17 +119,22 @@ function compareScores() {
     if (player1score[0].score > player2score[0].score && scoreCount1 < 10 && scoreCount2 !== 10) {
         scoreCount1 += 1
         $score1.text(`${scoreCount1}`)
-        // wonDraw = true
         return
     } else if (player2score[0].score > player1score[0].score && scoreCount2 < 10 && scoreCount1 !== 10) {
         scoreCount2 += 1
         $score2.text(`${scoreCount2}`)
-        // wonDraw = true
         return
     } else if (player2score[0].score === player1score[0].score) {
         $tie.show()
-        // isATie = true
-        tieBreaker()
+        isATie = true
+        return
+    } else if (isATie === true && player1score[0].score > player2score[0].score && scoreCount1 < 10 && scoreCount2 !== 10) {
+        scoreCount1 += 2
+        $score1.text(`${scoreCount1}`)
+        return
+    } else if (isATie === true && player2score[0].score > player1score[0].score && scoreCount2 < 10 && scoreCount1 !== 10) {
+        scoreCount1 += 2
+        $score1.text(`${scoreCount1}`)
         return
     } else {
         console.log('not adding score')
@@ -139,33 +143,6 @@ function compareScores() {
     console.log(`Card2 Value: ${player2score[0].score}`)
     console.log(`Player 1 Score: ${scoreCount1}`)
     console.log(`Player 2 Score: ${scoreCount2}`)
-}
-
-
-// tie breaker function
-function tieBreaker() {
-    // if (isATie === true) {
-    let player1score = player1.slice(-1)
-    let player2score = player2.slice(-1)
-    if (player1score[0].score > player2score[0].score && scoreCount1 < 10 && scoreCount2 !== 10) {
-        scoreCount1 += 2
-        $score1.text(`${scoreCount1}`)
-        // wonDraw = true
-        return
-    } if (player2score[0].score > player1score[0].score && scoreCount2 < 10 && scoreCount1 !== 10) {
-        scoreCount2 += 2
-        $score2.text(`${scoreCount2}`)
-        // wonDraw = true
-        return
-    } //else if (player2score[0].score === player1score[0].score) {
-    // $tie.show()
-    // isATie = true
-    // tieBreaker()
-    // return
-    // } else {
-    //   console.log('not adding score') 
-    // }
-    // }
 }
 
 
