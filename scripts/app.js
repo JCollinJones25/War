@@ -1,6 +1,6 @@
 
 // class of cards and class of deck
-// cards includes card rank, suit, and score
+// cards includes rank, suit, and score
 class Cards {
     constructor(suit, rank, score) {
         this.suit = suit
@@ -26,26 +26,33 @@ class Deck {
         }
     }
 }
-const deck1 = new Deck()
-deck1.draw()
 
-// shuffle the deck and divide by two
-// custom sort method found on DEV
-const shuffledDeck = deck1.cards.sort((a, b) => .5 - Math.random())
+let player1, player2
 
+function reDeal(){
+    const deck1 = new Deck()
+    deck1.draw()
+    
+    // shuffle the deck and divide by two
+    // custom sort method found on DEV
+    const shuffledDeck = deck1.cards.sort((a, b) => .5 - Math.random())
+    
+    player1 = []
+    for (let i = 0; i < shuffledDeck.length / 2; i++) {
+        // console.log(shuffledDeck[i])
+        player1.push(shuffledDeck[i])
+    }
+    
+    player2 = []
+    for (let i = 26; i < shuffledDeck.length; i++) {
+        player2.push(shuffledDeck[i])
+    }
 
-// global variables
-let player1 = []
-for (let i = 0; i < shuffledDeck.length / 2; i++) {
-    // console.log(shuffledDeck[i])
-    player1.push(shuffledDeck[i])
 }
+reDeal()
 
-let player2 = []
-for (let i = 26; i < shuffledDeck.length; i++) {
-    player2.push(shuffledDeck[i])
-}
 
+//global variables
 let $draw = $('.draw')
 let $faceup1 = $('.faceup1')
 let $faceup2 = $('.faceup2')
@@ -56,14 +63,11 @@ let $score1 = $('#value1')
 let $score2 = $('#value2')
 scoreCount1 = 0
 scoreCount2 = 0
-discardPile1 = player1.pop()
-discardPile2 = player2.pop()
-// discardPile1 = []
-// discardPile2 = []
 let $nextCard = $('.nextCard')
 let $newGame = $('.newGame')
 gameIsOver = false
 isClicked = true
+
 
 // draw button
 $draw.click(gamePlay)
@@ -71,17 +75,17 @@ $draw.click(gamePlay)
 
 // game play function
 function gamePlay() {
-   if (isClicked === true){
-    $('.facedown1').hide()
-    $('.facedown2').hide()
-    displayCards()
-    compareScores()
-    gameOver()
-    gameIsOver
-   }
+    if (isClicked === true){
+        $('.facedown1').hide()
+        $('.facedown2').hide()
+        displayCards()
+        compareScores()
+        gameOver()
+        gameIsOver
+    }
     isClicked = false
-    // console.log(discardPile1)
 }
+
 
 // display cards function
 function displayCards() {
@@ -139,13 +143,13 @@ $nextCard.click(nextCard)
 function nextCard() {
     $('.facedown1').show()
     $('.facedown2').show()
-    player1.pop()
-    player2.pop()
     $tie.hide()
     if (gameIsOver === true){
         return
     }
     isClicked = true
+    player1.pop()
+    player2.pop()
 }
 
 
@@ -154,8 +158,6 @@ $newGame.click(newGame)
 function newGame() {
     $('.facedown1').show()
     $('.facedown2').show()
-    // player1.pop()
-    // player2.pop()
     $tie.hide()
     $player1wins.hide()
     $player2wins.hide()
@@ -164,19 +166,7 @@ function newGame() {
     scoreCount1 = 0
     scoreCount2 = 0
     isClicked = true
-    // reDeal()
-    // ?? needs to get all cards back into player arrays ??
+    gameIsOver = false
+    reDeal()
 }
 
-
-// discard pile array -> push used cards
-// would need to set decks back up after new game button clicked
-
-// function reDeal(){
-//     for (let i = 0; i < discardPile1.length; i++) {
-//         player1.push(i)
-//     }
-//     for (let i = 0; i < discardPile2.length; i++) {
-//         player2.push(i)
-//     }
-// }
