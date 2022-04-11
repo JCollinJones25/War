@@ -119,38 +119,40 @@ function compareScores() {
         isATie = false
         scoreCount1 += 1
         $score1.text(`${scoreCount1}`)
-        console.log(isATie)
+        console.log(`war? ${isATie}`)
         return
     } else if (isATie === false && player2score[0].score > player1score[0].score && scoreCount2 < 10 && scoreCount1 !== 10) {
         isATie = false
         scoreCount2 += 1
         $score2.text(`${scoreCount2}`)
-        console.log(isATie)
+        console.log(`war? ${isATie}`)
         return
     } else if (player2score[0].score === player1score[0].score) {
         $tie.show()
         isATie = true
-        console.log(isATie)
+        console.log(`war? ${isATie}`)
+        console.log(`Card1 Value: ${player1score[0].score}`)
+        console.log(`Card2 Value: ${player2score[0].score}`)
+        console.log(`Player 1 Score: ${scoreCount1}`)
+        console.log(`Player 2 Score: ${scoreCount2}`)
         return
     } else if (isATie === true && player1score[0].score > player2score[0].score && scoreCount1 < 10 && scoreCount2 !== 10) {
         isATie = false
         scoreCount1 += 2
         $score1.text(`${scoreCount1}`)
-        console.log(isATie)
+        console.log(`war? ${isATie}`)
+        console.log('Player 1 got an extra point!')
         return
     } else if (isATie === true && player2score[0].score > player1score[0].score && scoreCount2 < 10 && scoreCount1 !== 10) {
         isATie = false
-        scoreCount1 += 2
-        $score1.text(`${scoreCount1}`)
-        console.log(isATie)
+        scoreCount2 += 2
+        $score2.text(`${scoreCount2}`)
+        console.log(`war? ${isATie}`)
+        console.log('Player 2 got an extra point!')
         return
     } else {
         console.log('not adding score')
     }
-    console.log(`Card1 Value: ${player1score[0].score}`)
-    console.log(`Card2 Value: ${player2score[0].score}`)
-    console.log(`Player 1 Score: ${scoreCount1}`)
-    console.log(`Player 2 Score: ${scoreCount2}`)
 }
 
 
@@ -159,9 +161,11 @@ function gameOver() {
     if (scoreCount1 >= 10) {
         $player1wins.show()
         gameIsOver = true
+        console.log('Game Over - Press `New Game`')
     } else if (scoreCount2 >= 10) {
         $player2wins.show()
         gameIsOver = true
+        console.log('Game Over - Press `New Game`')
     } else {
         console.log('Game in progress')
     }
