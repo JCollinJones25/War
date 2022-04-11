@@ -58,6 +58,7 @@ War is a simple card game where a single, standard deck of 52 cards is split in 
 * Include 'cards remaining:' display next to decks. (done)
 * front of card should be just number and words saying suit (done)
 * front of card is image of suit 
+* display text when player wins a tie breaker
 * Instead of having a 'next card' button, draw starts a timer and the table resets after the cards are revealed
 * give design to card when face up
 * Display text "War!" if there is a tie (done)
