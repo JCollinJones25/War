@@ -119,25 +119,30 @@ function compareScores() {
         isATie = false
         scoreCount1 += 1
         $score1.text(`${scoreCount1}`)
+        console.log(isATie)
         return
     } else if (isATie === false && player2score[0].score > player1score[0].score && scoreCount2 < 10 && scoreCount1 !== 10) {
         isATie = false
         scoreCount2 += 1
         $score2.text(`${scoreCount2}`)
+        console.log(isATie)
         return
     } else if (player2score[0].score === player1score[0].score) {
         $tie.show()
         isATie = true
-        // return
+        console.log(isATie)
+        return
     } else if (isATie === true && player1score[0].score > player2score[0].score && scoreCount1 < 10 && scoreCount2 !== 10) {
-        isATie = true
+        isATie = false
         scoreCount1 += 2
         $score1.text(`${scoreCount1}`)
+        console.log(isATie)
         return
     } else if (isATie === true && player2score[0].score > player1score[0].score && scoreCount2 < 10 && scoreCount1 !== 10) {
-        isATie = true
+        isATie = false
         scoreCount1 += 2
         $score1.text(`${scoreCount1}`)
+        console.log(isATie)
         return
     } else {
         console.log('not adding score')
