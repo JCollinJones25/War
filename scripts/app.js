@@ -163,7 +163,7 @@ function tieBreaker() {
     // tieBreaker()
     // return
     // } else {
-    //   console.log('not adding score')
+    //   console.log('not adding score') 
     // }
     // }
 }
