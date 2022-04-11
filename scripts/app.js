@@ -85,7 +85,6 @@ function gamePlay() {
         compareScores()
         gameOver()
         gameIsOver
-        isATie
     }
     isClicked = false
 }
@@ -116,23 +115,27 @@ cardsRemaining()
 function compareScores() {
     let player1score = player1.slice(-1)
     let player2score = player2.slice(-1)
-    if (player1score[0].score > player2score[0].score && scoreCount1 < 10 && scoreCount2 !== 10) {
+    if (isATie === false && player1score[0].score > player2score[0].score && scoreCount1 < 10 && scoreCount2 !== 10) {
+        isATie = false
         scoreCount1 += 1
         $score1.text(`${scoreCount1}`)
         return
-    } else if (player2score[0].score > player1score[0].score && scoreCount2 < 10 && scoreCount1 !== 10) {
+    } else if (isATie === false && player2score[0].score > player1score[0].score && scoreCount2 < 10 && scoreCount1 !== 10) {
+        isATie = false
         scoreCount2 += 1
         $score2.text(`${scoreCount2}`)
         return
     } else if (player2score[0].score === player1score[0].score) {
         $tie.show()
         isATie = true
-        return
+        // return
     } else if (isATie === true && player1score[0].score > player2score[0].score && scoreCount1 < 10 && scoreCount2 !== 10) {
+        isATie = true
         scoreCount1 += 2
         $score1.text(`${scoreCount1}`)
         return
     } else if (isATie === true && player2score[0].score > player1score[0].score && scoreCount2 < 10 && scoreCount1 !== 10) {
+        isATie = true
         scoreCount1 += 2
         $score1.text(`${scoreCount1}`)
         return
