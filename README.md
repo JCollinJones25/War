@@ -50,7 +50,7 @@ War is a simple card game where a single, standard deck of 52 cards is split in 
 * Score will stop recording after score limit (done)
 * Draw button should not continue adding score if you keep clicking draw instead of getting new card (done)
 * Draw button shouldn't be able to be clicked after one player wins (done)
-* There needs to be higher stakes when there is a war condition - for point scoring system, tie breaker gets 2 points
+* There needs to be higher stakes when there is a war condition - for point scoring system, tie breaker gets 2 points (done)
 
 ## Stretch Goals
 * As the game stands, the cards are popped/discarded out of the deck. Cards need to be put back into array (deck) when new game button is clicked. (done)
