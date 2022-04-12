@@ -395,11 +395,11 @@
     }
 
     .nextCard {
-        margin-left: 12%;
+        margin-left: 15%;
     }
 
     .newGame {
-        margin-right: 12%;
+        margin-right: 15%;
     }
 
     .faceup1 {
@@ -411,14 +411,16 @@
     }
 
     .deck1 {
-        height: 20%;
+        height: 30%;
+        width: 30%;
         margin: 5%;
         margin-top: 5px;
         margin-bottom: 5px;
     }
     
     .deck2 {
-        height: 20%;
+        height: 30%;
+        width: 30%;
         margin: 5%;
         margin-top: 5px;
         margin-bottom: 5px;
@@ -438,14 +440,14 @@
     }
 
     .player1wins {
-        margin-top: 5%;
+        top: 400px;
     }
-
+    
     .player2wins {
-        margin-top: 5%;
+        top: 400px;
     }
 
     .tie {
-        margin-top: 5%;
+        top: 400px;
     }
 }
