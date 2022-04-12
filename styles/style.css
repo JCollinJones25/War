@@ -373,7 +373,7 @@
     }
 }
 
-@media (min-width: 320px) and (max-width: 450px) {
+@media (min-width: 320px){
     .rules {
         font-size: 14px;
     }
