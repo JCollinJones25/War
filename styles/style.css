@@ -395,4 +395,10 @@ h2 {
     .deck2 {
         height: 25%;
     }
+    .cardsRemaining1 {
+        font-size: 75%;
+    }
+    .cardsRemaining2 {
+        font-size: 75%;
+    }
 }
