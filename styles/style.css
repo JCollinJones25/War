@@ -148,7 +148,6 @@
         border-radius: 5%;
         margin-bottom: 50px;
         margin: 10px;
-        margin-bottom: 40px;
     }
 
     .score2 {
@@ -161,7 +160,6 @@
         border-radius: 5%;
         margin-bottom: 50px;
         margin: 10px;
-        margin-bottom: 40px;
     }
 
     .draw {
@@ -375,17 +373,26 @@
     }
 }
 
-@media (max-width: 320px) {
+@media (min-width: 320px) and (max-width: 450px) {
     .rules {
-        height: 110px;
+        font-size: 15px;
+    }
+
+    .score1 {
+        margin-top: 5px;
+        margin-bottom: 75px;
+    }
+    .score2 {
+        margin-top: 5px;
+        margin-bottom: 75px;
     }
 
     .nextCard {
-        margin-left: 17%;
+        margin-left: 18%;
     }
 
     .newGame {
-        margin-right: 17%;
+        margin-right: 18%;
     }
 
     .faceup1 {
@@ -398,12 +405,18 @@
 
     .deck1 {
         height: 25%;
+        margin: 5%;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
-
+    
     .deck2 {
         height: 25%;
+        margin: 5%;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
-
+    
     .cardsRemaining1 {
         font-size: 75%;
     }
@@ -418,15 +431,15 @@
     }
 
     .player1wins {
-        margin-top: 12%;
+        margin-top: 5%;
     }
 
     .player2wins {
-        margin-top: 12%;
+        margin-top: 5%;
     }
 
     .tie {
-        margin-top: 12%;
+        margin-top: 5%;
     }
 
 }
