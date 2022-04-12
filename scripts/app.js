@@ -85,6 +85,9 @@ function gamePlay() {
         compareScores()
         gameOver()
         gameIsOver
+        suitImage()
+        $('.faceup1').show()
+        $('.faceup2').show()
     }
     isClicked = false
 }
@@ -93,10 +96,10 @@ function gamePlay() {
 // display cards function
 function displayCards() {
     for (let i = 0; i < player1.length; i++) {
-        $faceup1.text(`${player1[i].rank} of ${player1[i].suit}`)
+        $faceup1.text(`${player1[i].rank}`)
     }
     for (let i = 0; i < player2.length; i++) {
-        $faceup2.text(`${player2[i].rank} of ${player2[i].suit}`)
+        $faceup2.text(`${player2[i].rank}`)
     }
 }
 
@@ -185,6 +188,15 @@ function nextCard() {
         player1.pop()
         player2.pop()
         cardsRemaining()
+        // suitImage()
+        $clubs1.hide()
+        $clubs2.hide()
+        $hearts1.hide()
+        $hearts2.hide()
+        $spades1.hide()
+        $spades2.hide()
+        $diamonds1.hide()
+        $diamonds2.hide()
     }
     isClicked = true
 }
@@ -208,3 +220,64 @@ function newGame() {
     cardsRemaining()
 }
 
+
+//display suit image function
+let $clubs1 = $('.clubs1')
+let $clubs2 = $('.clubs2')
+let $hearts1 = $('.hearts1')
+let $hearts2 = $('.hearts2')
+let $spades1 = $('.spades1')
+let $spades2 = $('.spades2')
+let $diamonds1 = $('.diamonds1')
+let $diamonds2 = $('.diamonds2')
+let player1suit = player1.slice(-1)
+let player2suit = player2.slice(-1)
+function suitImage() {
+    for (let i = 0; i < player1.length; i++) {
+        if (player1[i].suit == 'Clubs') {
+            $clubs1.show()
+            $spades1.hide()
+            $hearts1.hide()
+            $diamonds1.hide()
+        } else if (player1[i].suit == 'Hearts') {
+            $hearts1.show()
+            $clubs1.hide()
+            $spades1.hide()
+            $diamonds1.hide()
+        } else if (player1[i].suit == 'Spades'){
+            $spades1.show()
+            $clubs1.hide()
+            $hearts1.hide()
+            $diamonds1.hide()
+        } else {
+            $diamonds1.show()
+            $clubs1.hide()
+            $spades1.hide()
+            $hearts1.hide()
+        }
+    }
+    for (let i = 0; i < player2.length; i++) {
+        if (player2[i].suit == 'Clubs') {
+            $clubs2.show()
+            $spades2.hide()
+            $hearts2.hide()
+            $diamonds2.hide()
+        } else if (player2[i].suit == 'Hearts') {
+            $hearts2.show()
+            $clubs2.hide()
+            $spades2.hide()
+            $diamonds2.hide()
+        } else if (player2[i].suit == 'Spades'){
+            $spades2.show()
+            $clubs2.hide()
+            $hearts2.hide()
+            $diamonds2.hide()
+        } else {
+            $diamonds2.show()
+            $clubs2.hide()
+            $spades2.hide()
+            $hearts2.hide()
+        }
+    }
+
+}

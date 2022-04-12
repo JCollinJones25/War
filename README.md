@@ -57,10 +57,10 @@ War is a simple card game where a single, standard deck of 52 cards is split in 
 * deck1 and deck2 divs can be image of back of card (done)
 * Include 'cards remaining:' display next to decks. (done)
 * front of card should be just number and words saying suit (done)
+* Display text "War!" if there is a tie (done)
 * front of card is image of suit 
 * display text when player wins a tie breaker
 * Instead of having a 'next card' button, draw starts a timer and the table resets after the cards are revealed
-* give design to card when face up
-* Display text "War!" if there is a tie (done)
 * give cards flip effect in css
 * make the game where every time player wins another scoreboard keeps track of total wins so players can play best of 3 or multiple rounds.
+* Change point system to classic war scoring system. Winner of a hand gets losers cards.
