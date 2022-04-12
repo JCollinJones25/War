@@ -1,5 +1,13 @@
 # WAR - Project One
 
+## Getting Started
+[Link to War](https://jcollinjones25.github.io/JCJ-War-Card-Game/)
+
+## Technologies Used
+HTML
+CSS
+Javascript
+
 ## War Overview
 
 War is a simple card game where a single, standard deck of 52 cards is split in half and divided between two players. Both decks are face down and on each turn, both players flip the top card. The player with the highest card wins the round and gets to keep the losing players card(s) that were turned up. The player with the whole deck at the end wins. You can also play with a point system.
