@@ -1,7 +1,7 @@
 # WAR - Project One
 
 ## Getting Started
-Click [here] to play War! (https://jcollinjones25.github.io/JCJ-War-Card-Game/)
+Click [here](https://jcollinjones25.github.io/JCJ-War-Card-Game/) to play War!
 
 ## Technologies Used
 HTML | CSS | Javascript
