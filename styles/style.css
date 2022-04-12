@@ -373,7 +373,7 @@ h2 {
 
 }
 
-@media (min-width: 320px) {
+@media (min-width: 320px) and (max-width: 320px) {
     .rules {
         height: 110px;
     }
@@ -401,4 +401,18 @@ h2 {
     .cardsRemaining2 {
         font-size: 75%;
     }
+    .draw {
+        font-size: 60%;
+        text-align: center;
+    }
+    .player1wins {
+        margin-top: 12%;
+    }
+    .player2wins {
+        margin-top: 12%;
+    }
+    .tie {
+        margin-top: 12%;
+    }
+    
 }
