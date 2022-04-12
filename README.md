@@ -1,12 +1,10 @@
 # WAR - Project One
 
 ## Getting Started
-[Link to War](https://jcollinjones25.github.io/JCJ-War-Card-Game/)
+Click [here] to play War! (https://jcollinjones25.github.io/JCJ-War-Card-Game/)
 
 ## Technologies Used
-HTML
-CSS
-Javascript
+HTML | CSS | Javascript
 
 ## War Overview
 
@@ -67,7 +65,6 @@ War is a simple card game where a single, standard deck of 52 cards is split in 
 * front of card should be just number and words saying suit (done)
 * Display text "War!" if there is a tie (done)
 * front of card is image of suit (done)
-* display text when player wins a tie breaker
 * Instead of having a 'next card' button, draw starts a timer and the table resets after the cards are revealed
 * give cards flip effect in css
 * make the game where every time player wins another scoreboard keeps track of total wins so players can play best of 3 or multiple rounds.
