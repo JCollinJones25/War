@@ -64,3 +64,14 @@ War is a simple card game where a single, standard deck of 52 cards is split in 
 * give cards flip effect in css
 * make the game where every time player wins another scoreboard keeps track of total wins so players can play best of 3 or multiple rounds.
 * Change point system to classic war scoring system. Winner of a hand gets losers cards.
+
+## Screenshots
+![war tile](https://user-images.githubusercontent.com/86025071/163034822-2baf7032-5aad-4e30-a337-968b81f2152e.png)
+
+![war start game](https://user-images.githubusercontent.com/86025071/163035435-233c5990-349c-47cd-b222-0de36d214725.png)
+
+![war tie](https://user-images.githubusercontent.com/86025071/163035555-56ce2263-c1a0-4de4-ae5c-7fff87d53a99.png)
+
+![war tie breaker](https://user-images.githubusercontent.com/86025071/163035646-d1c5461f-0741-41bb-8080-56aef0e76661.png)
+
+![war win condition](https://user-images.githubusercontent.com/86025071/163035722-50e2d719-9421-4e00-80b8-a9ef790885f6.png)
