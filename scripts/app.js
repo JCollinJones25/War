@@ -144,14 +144,14 @@ function compareScores() {
         scoreCount1 += 2
         $score1.text(`${scoreCount1}`)
         console.log(`war? ${isATie}`)
-        console.log('Player 1 got an extra point!')
+        console.log('P1 got an extra point!')
         return
     } else if (isATie === true && player2score[0].score > player1score[0].score && scoreCount2 < 10 && scoreCount1 !== 10) {
         isATie = false
         scoreCount2 += 2
         $score2.text(`${scoreCount2}`)
         console.log(`war? ${isATie}`)
-        console.log('Player 2 got an extra point!')
+        console.log('P2 got an extra point!')
         return
     } else {
         console.log('not adding score')
