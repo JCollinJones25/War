@@ -372,3 +372,27 @@ h2 {
     position: absolute;
 
 }
+
+@media (min-width: 320px) {
+    .rules {
+        height: 110px;
+    }
+    .nextCard {
+        margin-left: 17%;
+    }
+    .newGame {
+        margin-right: 17%;
+    }
+    .faceup1 {
+        font-size: 35px;
+    }
+    .faceup2 {
+        font-size: 35px;
+    }
+    .deck1 {
+        height: 25%;
+    }
+    .deck2 {
+        height: 25%;
+    }
+}
