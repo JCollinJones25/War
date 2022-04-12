@@ -113,7 +113,7 @@ cardsRemaining()
 
 
 // compare scores function
-//sclice(-1) is accessing last index
+// sclice(-1) is accessing last index
 // store last index in variable
 function compareScores() {
     let player1score = player1.slice(-1)
@@ -183,12 +183,19 @@ function nextCard() {
         $('.facedown2').show()
         $tie.hide()
         if (gameIsOver === true) {
+            $clubs1.hide()
+            $clubs2.hide()
+            $hearts1.hide()
+            $hearts2.hide()
+            $spades1.hide()
+            $spades2.hide()
+            $diamonds1.hide()
+            $diamonds2.hide()
             return
         }
         player1.pop()
         player2.pop()
         cardsRemaining()
-        // suitImage()
         $clubs1.hide()
         $clubs2.hide()
         $hearts1.hide()
@@ -218,6 +225,14 @@ function newGame() {
     gameIsOver = false
     reDeal()
     cardsRemaining()
+    $clubs1.hide()
+    $clubs2.hide()
+    $hearts1.hide()
+    $hearts2.hide()
+    $spades1.hide()
+    $spades2.hide()
+    $diamonds1.hide()
+    $diamonds2.hide()
 }
 
 
@@ -244,7 +259,7 @@ function suitImage() {
             $clubs1.hide()
             $spades1.hide()
             $diamonds1.hide()
-        } else if (player1[i].suit == 'Spades'){
+        } else if (player1[i].suit == 'Spades') {
             $spades1.show()
             $clubs1.hide()
             $hearts1.hide()
@@ -267,7 +282,7 @@ function suitImage() {
             $clubs2.hide()
             $spades2.hide()
             $diamonds2.hide()
-        } else if (player2[i].suit == 'Spades'){
+        } else if (player2[i].suit == 'Spades') {
             $spades2.show()
             $clubs2.hide()
             $hearts2.hide()
@@ -279,5 +294,4 @@ function suitImage() {
             $hearts2.hide()
         }
     }
-
 }
