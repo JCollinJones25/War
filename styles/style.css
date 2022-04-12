@@ -1,418 +1,432 @@
-body {
-    background-color: rgb(2, 55, 2);
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-}
-
-h1 {
-    color: yellow;
-    font-size: 70px;
-    font-family: 'Beau Rivage', cursive;
-    margin-bottom: 5px;
-}
-
-h2 {
-    color: brown;
-}
-
-.rules {
-    background-color: salmon;
-    color: brown;
-    height: 80px;
-    max-width: 500px;
-    border: solid;
-    border-color: red;
-    margin: 0 auto;
-    margin-bottom: 10px;
-    padding: 5px;
-    justify-content: space-around;
-    font-size: 18px;
-    white-space: pre-line;
-}
-
-.gametable {
-    background-color: darkgreen;
-    height: 600px;
-    max-width: 500px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
-    flex-direction: row;
-    border: solid;
-    border-width: 10px;
-    border-color: brown;
-    border-radius: 5%;
-    flex-wrap: wrap;
-    z-index: -10;
-}
-
-.deck1 {
-    height: 33%;
-    width: 30%;
-    border: solid;
-    border-color: red;
-    border-radius: 5%;
-    margin: 30px;
-    margin-bottom: 5px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-
-.deck2 {
-    height: 33%;
-    width: 30%;
-    border: solid;
-    border-color: red;
-    border-radius: 5%;
-    margin: 30px;
-    margin-bottom: 5px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-
-.faceup1 {
-    background-color: white;
-    height: 100%;
-    width: 100%;
-    border: solid;
-    border-color: red;
-    border-radius: 5%;
-    position: absolute;
-    z-index: 1;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-size: 50px;
-}
-
-.faceup2 {
-    background-color: white;
-    height: 100%;
-    width: 100%;
-    border: solid;
-    border-color: red;
-    border-radius: 5%;
-    position: absolute;
-    z-index: 1;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-size: 50px;
-}
-
-.facedown1 {
-    background-image: url("https://opengameart.org/sites/default/files/card%20back%20red.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: white;
-    height: 100%;
-    width: 100%;
-    border: solid;
-    border-color: red;
-    border-radius: 5%;
-    z-index: 2;
-    position: absolute;
-}
-
-.facedown2 {
-    background-image: url("https://opengameart.org/sites/default/files/card%20back%20red.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: white;
-    height: 100%;
-    width: 100%;
-    border: solid;
-    border-color: red;
-    border-radius: 5%;
-    z-index: 2;
-    position: absolute;
-}
-
-.score1 {
-    background-color: salmon;
-    color: brown;
-    height: 15%;
-    width: 33%;
-    border: solid;
-    border-color: red;
-    border-radius: 5%;
-    margin-bottom: 50px;
-    margin: 10px;
-    margin-bottom: 40px;
-}
-
-.score2 {
-    background-color: salmon;
-    color: brown;
-    height: 15%;
-    width: 33%;
-    border: solid;
-    border-color: red;
-    border-radius: 5%;
-    margin-bottom: 50px;
-    margin: 10px;
-    margin-bottom: 40px;
-}
-
-.draw {
-    background-color: slateblue;
-    color: yellow;
-    height: 60px;
-    width: 60px;
-    font-size: 75%;
-    border-color: brown;
-    border-width: 5px;
-    border-radius: 50%;
-    align-self: center;
-}
-
-.nextCard {
-    background-color: blue;
-    color: yellow;
-    height: 50px;
-    width: 65px;
-    font-size: 75%;
-    border-color: brown;
-    border-width: 5px;
-    border-radius: 25%;
-    margin-left: 25%;
-    align-self: center;
-    flex-wrap: wrap;
-}
-
-.newGame {
-    background-color: rgb(47, 37, 115);
-    color: yellow;
-    height: auto;
-    height: 50px;
-    width: 65px;
-    font-size: 75%;
-    border-color: brown;
-    border-width: 5px;
-    border-radius: 25%;
-    align-self: center;
-    margin-right: 25%;
-}
-
-.value1 {
-    font-size: 60px;
-}
-
-.value2 {
-    font-size: 60px;
-}
-
-.tie {
-    display: none;
-    font-size: 35px;
-    color: red;
-    z-index: 100;
-    flex-wrap: wrap;
-    margin-top: 0;
-    margin-bottom: 0;
-    position: absolute;
-    top: 445px;
-}
-
-.player1wins {
-    display: none;
-    font-size: 35px;
-    color: yellow;
-    z-index: 100;
-    flex-wrap: wrap;
-    margin-top: 0;
-    margin-bottom: 0;
-    position: absolute;
-    top: 445px;
-}
-
-.player2wins {
-    display: none;
-    font-size: 35px;
-    color: yellow;
-    z-index: 100;
-    flex-wrap: wrap;
-    margin-top: 0;
-    margin-bottom: 0;
-    position: absolute;
-    top: 445px;
-}
-
-.cardsRemaining1 {
-    color: yellow;
-    height: auto;
-    width: 33%;
-    margin-bottom: 25px;
-}
-
-.cardsRemaining2 {
-    color: yellow;
-    height: auto;
-    width: 33%;
-    margin-bottom: 25px;
-}
-
-.clubs1 {
-    display: none;
-    background-image: url("https://i.etsystatic.com/27498402/r/il/db473b/2955754533/il_1588xN.2955754533_dhwx.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 25%;
-    width: 33%;
-    margin-top: 20px;
-    background-color: white;
-    z-index: 10;
-    position: absolute;
-
-}
-
-.clubs2 {
-    display: none;
-    background-image: url("https://i.etsystatic.com/27498402/r/il/db473b/2955754533/il_1588xN.2955754533_dhwx.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 25%;
-    width: 33%;
-    margin-top: 20px;
-    background-color: white;
-    z-index: 10;
-    position: absolute;
-
-}
-
-.hearts1 {
-    display: none;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Naipe_copas.png/219px-Naipe_copas.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 25%;
-    width: 33%;
-    margin-top: 20px;
-    background-color: white;
-    z-index: 10;
-    position: absolute;
-
-}
-
-.hearts2 {
-    display: none;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Naipe_copas.png/219px-Naipe_copas.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 25%;
-    width: 33%;
-    margin-top: 20px;
-    background-color: white;
-    z-index: 10;
-    position: absolute;
-
-}
-
-.spades1 {
-    display: none;
-    background-image: url("data:image/png;base64,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");
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 25%;
-    width: 33%;
-    margin-top: 20px;
-    background-color: white;
-    z-index: 10;
-    position: absolute;
-
-}
-
-.spades2 {
-    display: none;
-    background-image: url("data:image/png;base64,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");
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 25%;
-    width: 33%;
-    margin-top: 20px;
-    background-color: white;
-    z-index: 10;
-    position: absolute;
-
-}
-
-.diamonds1 {
-    display: none;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/SuitDiamonds.svg/250px-SuitDiamonds.svg.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 25%;
-    width: 33%;
-    margin-top: 20px;
-    background-color: white;
-    z-index: 10;
-    position: absolute;
-
-}
-
-.diamonds2 {
-    display: none;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/SuitDiamonds.svg/250px-SuitDiamonds.svg.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 25%;
-    width: 33%;
-    margin-top: 20px;
-    background-color: white;
-    z-index: 10;
-    position: absolute;
-
-}
-
 @media (min-width: 320px) {
+    body {
+        background-color: rgb(2, 55, 2);
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    h1 {
+        color: yellow;
+        font-size: 70px;
+        font-family: 'Beau Rivage', cursive;
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        color: brown;
+    }
+
+    .rules {
+        background-color: salmon;
+        color: brown;
+        height: 80px;
+        max-width: 500px;
+        border: solid;
+        border-color: red;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        padding: 5px;
+        justify-content: space-around;
+        font-size: 18px;
+        white-space: pre-line;
+    }
+
+    .gametable {
+        background-color: darkgreen;
+        height: 600px;
+        max-width: 500px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        flex-direction: row;
+        border: solid;
+        border-width: 10px;
+        border-color: brown;
+        border-radius: 5%;
+        flex-wrap: wrap;
+        z-index: -10;
+    }
+
+    .deck1 {
+        height: 33%;
+        width: 30%;
+        border: solid;
+        border-color: red;
+        border-radius: 5%;
+        margin: 30px;
+        margin-bottom: 5px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .deck2 {
+        height: 33%;
+        width: 30%;
+        border: solid;
+        border-color: red;
+        border-radius: 5%;
+        margin: 30px;
+        margin-bottom: 5px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .faceup1 {
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        border: solid;
+        border-color: red;
+        border-radius: 5%;
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-size: 50px;
+    }
+
+    .faceup2 {
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        border: solid;
+        border-color: red;
+        border-radius: 5%;
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-size: 50px;
+    }
+
+    .facedown1 {
+        background-image: url("https://opengameart.org/sites/default/files/card%20back%20red.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        border: solid;
+        border-color: red;
+        border-radius: 5%;
+        z-index: 2;
+        position: absolute;
+    }
+
+    .facedown2 {
+        background-image: url("https://opengameart.org/sites/default/files/card%20back%20red.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        border: solid;
+        border-color: red;
+        border-radius: 5%;
+        z-index: 2;
+        position: absolute;
+    }
+
+    .score1 {
+        background-color: salmon;
+        color: brown;
+        height: 15%;
+        width: 33%;
+        border: solid;
+        border-color: red;
+        border-radius: 5%;
+        margin-bottom: 50px;
+        margin: 10px;
+        margin-bottom: 40px;
+    }
+
+    .score2 {
+        background-color: salmon;
+        color: brown;
+        height: 15%;
+        width: 33%;
+        border: solid;
+        border-color: red;
+        border-radius: 5%;
+        margin-bottom: 50px;
+        margin: 10px;
+        margin-bottom: 40px;
+    }
+
+    .draw {
+        background-color: slateblue;
+        color: yellow;
+        height: 60px;
+        width: 60px;
+        font-size: 75%;
+        border-color: brown;
+        border-width: 5px;
+        border-radius: 50%;
+        align-self: center;
+    }
+
+    .nextCard {
+        background-color: blue;
+        color: yellow;
+        height: 50px;
+        width: 65px;
+        font-size: 75%;
+        border-color: brown;
+        border-width: 5px;
+        border-radius: 25%;
+        margin-left: 25%;
+        align-self: center;
+        flex-wrap: wrap;
+    }
+
+    .newGame {
+        background-color: rgb(47, 37, 115);
+        color: yellow;
+        height: auto;
+        height: 50px;
+        width: 65px;
+        font-size: 75%;
+        border-color: brown;
+        border-width: 5px;
+        border-radius: 25%;
+        align-self: center;
+        margin-right: 25%;
+    }
+
+    .value1 {
+        font-size: 60px;
+    }
+
+    .value2 {
+        font-size: 60px;
+    }
+
+    .tie {
+        display: none;
+        font-size: 35px;
+        color: red;
+        z-index: 100;
+        flex-wrap: wrap;
+        margin-top: 0;
+        margin-bottom: 0;
+        position: absolute;
+        top: 445px;
+    }
+
+    .player1wins {
+        display: none;
+        font-size: 35px;
+        color: yellow;
+        z-index: 100;
+        flex-wrap: wrap;
+        margin-top: 0;
+        margin-bottom: 0;
+        position: absolute;
+        top: 445px;
+    }
+
+    .player2wins {
+        display: none;
+        font-size: 35px;
+        color: yellow;
+        z-index: 100;
+        flex-wrap: wrap;
+        margin-top: 0;
+        margin-bottom: 0;
+        position: absolute;
+        top: 445px;
+    }
+
+    .cardsRemaining1 {
+        color: yellow;
+        height: auto;
+        width: 33%;
+        margin-bottom: 25px;
+    }
+
+    .cardsRemaining2 {
+        color: yellow;
+        height: auto;
+        width: 33%;
+        margin-bottom: 25px;
+    }
+
+    .clubs1 {
+        display: none;
+        background-image: url("https://i.etsystatic.com/27498402/r/il/db473b/2955754533/il_1588xN.2955754533_dhwx.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 25%;
+        width: 33%;
+        margin-top: 20px;
+        background-color: white;
+        z-index: 10;
+        position: absolute;
+
+    }
+
+    .clubs2 {
+        display: none;
+        background-image: url("https://i.etsystatic.com/27498402/r/il/db473b/2955754533/il_1588xN.2955754533_dhwx.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 25%;
+        width: 33%;
+        margin-top: 20px;
+        background-color: white;
+        z-index: 10;
+        position: absolute;
+
+    }
+
+    .hearts1 {
+        display: none;
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Naipe_copas.png/219px-Naipe_copas.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 25%;
+        width: 33%;
+        margin-top: 20px;
+        background-color: white;
+        z-index: 10;
+        position: absolute;
+
+    }
+
+    .hearts2 {
+        display: none;
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Naipe_copas.png/219px-Naipe_copas.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 25%;
+        width: 33%;
+        margin-top: 20px;
+        background-color: white;
+        z-index: 10;
+        position: absolute;
+
+    }
+
+    .spades1 {
+        display: none;
+        background-image: url("data:image/png;base64,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");
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 25%;
+        width: 33%;
+        margin-top: 20px;
+        background-color: white;
+        z-index: 10;
+        position: absolute;
+
+    }
+
+    .spades2 {
+        display: none;
+        background-image: url("data:image/png;base64,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");
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 25%;
+        width: 33%;
+        margin-top: 20px;
+        background-color: white;
+        z-index: 10;
+        position: absolute;
+
+    }
+
+    .diamonds1 {
+        display: none;
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/SuitDiamonds.svg/250px-SuitDiamonds.svg.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 25%;
+        width: 33%;
+        margin-top: 20px;
+        background-color: white;
+        z-index: 10;
+        position: absolute;
+
+    }
+
+    .diamonds2 {
+        display: none;
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/SuitDiamonds.svg/250px-SuitDiamonds.svg.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 25%;
+        width: 33%;
+        margin-top: 20px;
+        background-color: white;
+        z-index: 10;
+        position: absolute;
+
+    }
+}
+
+@media (max-width: 320px) {
     .rules {
         height: 110px;
     }
+
     .nextCard {
         margin-left: 17%;
     }
+
     .newGame {
         margin-right: 17%;
     }
+
     .faceup1 {
         font-size: 35px;
     }
+
     .faceup2 {
         font-size: 35px;
     }
+
     .deck1 {
         height: 25%;
     }
+
     .deck2 {
         height: 25%;
     }
+
     .cardsRemaining1 {
         font-size: 75%;
     }
+
     .cardsRemaining2 {
         font-size: 75%;
     }
+
     .draw {
-        font-size: 60%;
+        font-size: 55%;
         text-align: center;
     }
+
     .player1wins {
         margin-top: 12%;
     }
+
     .player2wins {
         margin-top: 12%;
     }
+
     .tie {
         margin-top: 12%;
     }
-    
+
 }
