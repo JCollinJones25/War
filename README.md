@@ -4,7 +4,7 @@
 Click [here](https://jcollinjones25.github.io/JCJ-War-Card-Game/) to play War!
 
 ## Technologies Used
-HTML | CSS | Javascript
+HTML | CSS | Javascript | JQuery
 
 ## War Overview
 
