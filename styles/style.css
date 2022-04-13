@@ -1,4 +1,4 @@
-@media (min-width: 320px) {
+@media (max-width: 1800px){
     body {
         background-color: rgb(2, 55, 2);
         align-items: center;
@@ -57,12 +57,13 @@
         border-color: red;
         border-radius: 5%;
         margin: 30px;
+        margin-top: 10%;
         margin-bottom: 5px;
         position: relative;
         display: flex;
         justify-content: center;
     }
-
+    
     .deck2 {
         height: 33%;
         width: 30%;
@@ -70,6 +71,7 @@
         border-color: red;
         border-radius: 5%;
         margin: 30px;
+        margin-top: 10%;
         margin-bottom: 5px;
         position: relative;
         display: flex;
@@ -149,7 +151,7 @@
         margin-bottom: 50px;
         margin: 10px;
     }
-
+    
     .score2 {
         background-color: salmon;
         color: brown;
@@ -219,7 +221,7 @@
         margin-top: 0;
         margin-bottom: 0;
         position: absolute;
-        top: 445px;
+        top: 435px;
     }
 
     .player1wins {
@@ -231,7 +233,7 @@
         margin-top: 0;
         margin-bottom: 0;
         position: absolute;
-        top: 445px;
+        top: 435px;
     }
 
     .player2wins {
@@ -243,7 +245,7 @@
         margin-top: 0;
         margin-bottom: 0;
         position: absolute;
-        top: 445px;
+        top: 435px;
     }
 
     .cardsRemaining1 {
@@ -369,11 +371,171 @@
         background-color: white;
         z-index: 10;
         position: absolute;
+    }
+} 
 
+
+@media (max-width: 700px){
+    .rules {
+        font-size: 18px;
+    }
+
+    .gametable {
+        height: 600px;
+    }
+    .score1 {
+        margin-top: 5px;
+        margin-bottom: 50px;
+        height: 15%;
+        font-size: 90%;
+    }
+    .score2 {
+        margin-top: 5px;
+        margin-bottom: 50px;
+        height: 15%;
+        font-size: 90%;
+    }
+
+    .nextCard {
+        margin-left: 25%;
+    }
+
+    .newGame {
+        margin-right: 25%;
+    }
+
+    .faceup1 {
+        font-size: 35px;
+    }
+
+    .faceup2 {
+        font-size: 35px;
+    }
+
+    .deck1 {
+        height: 33%;
+        width: 30%;
+        margin: 5%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .deck2 {
+        height: 33%;
+        width: 30%;
+        margin: 5%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .cardsRemaining1 {
+        font-size: 95%;
+    }
+
+    .cardsRemaining2 {
+        font-size: 95%;
+    }
+
+    .draw {
+        font-size: 55%;
+        text-align: center;
+    }
+
+    .player1wins {
+        top: 430px;
+    }
+    
+    .player2wins {
+        top: 430px;
+    }
+
+    .tie {
+        top: 430px;
     }
 }
 
-@media (min-width: 320px){
+
+@media (max-width: 475px){
+    .rules {
+        font-size: 16px;
+    }
+
+    .gametable {
+        height: 600px;
+    }
+    .score1 {
+        margin-top: 5px;
+        margin-bottom: 50px;
+        height: 15%;
+        font-size: 90%;
+    }
+    .score2 {
+        margin-top: 5px;
+        margin-bottom: 50px;
+        height: 15%;
+        font-size: 90%;
+    }
+
+    .nextCard {
+        margin-left: 20%;
+    }
+
+    .newGame {
+        margin-right: 20%;
+    }
+
+    .faceup1 {
+        font-size: 35px;
+    }
+
+    .faceup2 {
+        font-size: 35px;
+    }
+
+    .deck1 {
+        height: 33%;
+        width: 35%;
+        margin: 5%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .deck2 {
+        height: 33%;
+        width: 35%;
+        margin: 5%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .cardsRemaining1 {
+        font-size: 95%;
+    }
+
+    .cardsRemaining2 {
+        font-size: 95%;
+    }
+
+    .draw {
+        font-size: 55%;
+        text-align: center;
+    }
+
+    .player1wins {
+        top: 435px;
+    }
+    
+    .player2wins {
+        top: 435px;
+    }
+
+    .tie {
+        top: 435px;
+    }
+}
+
+
+@media (max-width: 375px){
     .rules {
         font-size: 14px;
     }
@@ -411,16 +573,16 @@
     }
 
     .deck1 {
-        height: 30%;
-        width: 30%;
+        height: 28%;
+        width: 33%;
         margin: 5%;
         margin-top: 5px;
         margin-bottom: 5px;
     }
     
     .deck2 {
-        height: 30%;
-        width: 30%;
+        height: 28%;
+        width: 33%;
         margin: 5%;
         margin-top: 5px;
         margin-bottom: 5px;
@@ -451,3 +613,4 @@
         top: 400px;
     }
 }
+
