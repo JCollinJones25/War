@@ -42,7 +42,7 @@ War is a simple card game where a single, standard deck of 52 cards is split in 
 - I want next card to be face down before drawing it next
 
 ## Wireframing
-![wireframe image](https://github.com/JCollinJones25/GA-proj-1-War/blob/main/proj-1-wireframe.png?raw=true)
+![wireframe image](https://github.com/JCollinJones25/JCJ-War-Card-Game/blob/main/images/proj-1-wireframe.png?raw=true)
 
 ## MVP
 * Deck must be shuffled (randomized) at start of game (done)
@@ -72,12 +72,10 @@ War is a simple card game where a single, standard deck of 52 cards is split in 
 * Change point system to classic war scoring system. Winner of a hand gets losers cards.
 
 ## Screenshots
-![war tile](https://user-images.githubusercontent.com/86025071/163034822-2baf7032-5aad-4e30-a337-968b81f2152e.png)
+![war tile](https://github.com/JCollinJones25/JCJ-War-Card-Game/blob/main/images/start1.png?raw=true)
 
-![war start game](https://user-images.githubusercontent.com/86025071/163035435-233c5990-349c-47cd-b222-0de36d214725.png)
+![war start game](https://github.com/JCollinJones25/JCJ-War-Card-Game/blob/main/images/start2.png?raw=true)
 
-![war tie](https://user-images.githubusercontent.com/86025071/163035555-56ce2263-c1a0-4de4-ae5c-7fff87d53a99.png)
+![war tie](https://github.com/JCollinJones25/JCJ-War-Card-Game/blob/main/images/war.png?raw=true)
 
-![war tie breaker](https://user-images.githubusercontent.com/86025071/163035646-d1c5461f-0741-41bb-8080-56aef0e76661.png)
-
-![war win condition](https://user-images.githubusercontent.com/86025071/163035722-50e2d719-9421-4e00-80b8-a9ef790885f6.png)
+![war tie breaker](https://github.com/JCollinJones25/JCJ-War-Card-Game/blob/main/images/gameover.png?raw=true)
